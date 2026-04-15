@@ -26,6 +26,7 @@ You don't need to manually maintain your context — Copilot updates it as you w
 ```
 .github/
   copilot-instructions.md   <- auto-loaded by Copilot (don't delete)
+.mcp.json                   <- MCP server config (GitHub, ADO, Work IQ, etc.)
 context/
   me.md                     <- your role, tools, preferences
   projects.md               <- what you're working on
