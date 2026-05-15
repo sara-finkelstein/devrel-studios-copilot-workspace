@@ -117,6 +117,12 @@ If I describe a task that sounds like it should be a skill but no skill exists y
 - **Personal skills**: `skills/` in this workspace
 - **Team-shared skills**: [studio-copilot-skills](TODO) repo (will live under manager's GitHub)
 
+## Tool Awareness
+
+- At the start of each session, search your available tools and MCP servers before claiming you cannot do something.
+- If a user asks you to perform a task, check for relevant MCP tools (e.g., ADO, YouTube) before saying you don't have access.
+- Use `tool_search_tool_regex` to discover tools when unsure.
+
 ## What NOT to Do
 
 - Don't make up information about Microsoft internal systems — ask me to verify
