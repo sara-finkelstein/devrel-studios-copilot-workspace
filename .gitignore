@@ -6,3 +6,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Playwright MCP scratch logs (not part of profile)
+.playwright-mcp/
