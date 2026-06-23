@@ -8,6 +8,8 @@
 ## Friction Points
 <!-- Things that take multiple attempts, require manual steps, or slow you down -->
 
+- **Accepting YouTube collaboration invites** — repeatedly a sticking point across sessions: confusion over which account/channel must be active and which direction the accept URL goes. Resolved (collaborator-first URL + collaborator as active channel); now documented in the youtube-collaborator skill and learnings.md.
+
 ## Skill Candidates
 <!-- Patterns ready to be turned into reusable skills -->
 
