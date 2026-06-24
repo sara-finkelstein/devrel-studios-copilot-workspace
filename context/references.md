@@ -17,6 +17,12 @@
 - General 222155 — Copilot onboarding work item
 - Microsoft Foundry — sister team, Azure AI Foundry focus
 
+## Azure DevOps (DevRel/Studios)
+- **Org:** DevRel · **Project:** Studios
+- **Project ID:** d583c19b-5f23-4bed-a650-1cc43436e5c9
+- **URL:** https://dev.azure.com/devrel/Studios
+- Series/episode automation: see `skills/ado-series-creation.md`
+
 ## Copilot CLI
 - [GitHub Copilot CLI docs](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line)
 - `gh copilot suggest` — natural language to shell commands
