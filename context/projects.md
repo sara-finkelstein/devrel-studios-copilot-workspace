@@ -4,6 +4,12 @@
 
 ## Active
 
+### ADO Series Creation skill — align with new structures
+- **Status:** follow-up / not started
+- **What:** Verify `skills/ado-series-creation.md` matches the current ROS template structure (now in OneDrive\Documents\Team Biz\DevRelStudios-ROS) and the current ADO work item structure before relying on it
+- **Why:** Skill was migrated from the old testMCP playbook; ROS and ADO structures have changed since
+- **Also:** once validated, consider sharing to the team skills repo (see references.md)
+
 ### YouTube API Setup
 - **Status:** complete
 - **What:** Set up YouTube Data API OAuth for 3 channels (msdev, azd, vs) and enhanced youtube-api.js with view count stats
