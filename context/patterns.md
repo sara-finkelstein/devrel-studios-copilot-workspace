@@ -13,5 +13,7 @@
 ## Skill Candidates
 <!-- Patterns ready to be turned into reusable skills -->
 
+- **Capture meeting follow-ups into the to-do list** — pull action items from a recorded/transcribed meeting (via Work IQ), then drop them into the project-grouped `To-Do-List.xlsx` under the right project band. Seen 1x (6/24, MVP intro chat w/ Martin Tatar). *Suggested skill:* "capture my action items from [meeting] into my to-do list" — find meeting via Work IQ, extract owner/task/due, map to existing project section (or create one), set Status=Open. Promote at 3+ uses.
+
 ## Promoted to Skills
 <!-- Patterns that became skills — kept here for history -->
