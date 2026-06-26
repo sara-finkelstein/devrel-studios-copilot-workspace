@@ -4,6 +4,14 @@
 
 ## Active
 
+### ⏸️ RESUME HERE — Fix "DevRel Studios" terminal profile
+- **Status:** in progress / blocked by Defender intercept
+- **Goal:** Make the taskbar "DevRel Studios" profile launch in the workspace so global + repo instructions + context all load
+- **The bug:** profile's `startingDirectory` pointed to `C:\Users\sfinkelstein\Documents\Copilot\devrel-studios-copilot-workspace` (does NOT exist). Correct path: `C:\Users\sfinkelstein\devrel-studios-copilot-workspace`. A second hidden "GitHub Copilot" profile had the same wrong path.
+- **What happened:** edited Windows Terminal `settings.json` (changed path + set "DevRel Studios" to `cmd.exe /k copilot`). Windows Terminal showed a "reset to defaults" warning and an enterprise Defender policy hook (`HKLM_Software_Policies_GitHub_Copilot_Defender`) started intercepting tool calls — likely tripped by the auto-launch command.
+- **Backup exists:** `settings.json.bak` in `...\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`
+- **Next steps after restart:** (1) confirm settings.json is intact (Terminal → Ctrl+, → Open JSON file); restore the .bak if needed. (2) Fix ONLY the `startingDirectory` path on both profiles — skip the `cmd.exe /k copilot` auto-launch since that likely triggered Defender. (3) Then just type `copilot` after the profile opens.
+
 ### ADO Series Creation skill — align with new structures
 - **Status:** follow-up / not started
 - **What:** Verify `skills/ado-series-creation.md` matches the current ROS template structure (now in OneDrive\Documents\Team Biz\DevRelStudios-ROS) and the current ADO work item structure before relying on it
