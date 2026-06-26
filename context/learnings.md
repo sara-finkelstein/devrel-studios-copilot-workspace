@@ -6,6 +6,8 @@
 
 ## Copilot Tips
 
+- **Installing plugin skills manually** — skills from mvp-copilot-plugins are just folders; download each `SKILL.md` (+ any scripts) into `~/.copilot/skills/`. Shared scripts go in a plugin root (`~/.copilot/plugins/devrel-studios/`) and the `<PLUGIN_ROOT>` placeholder in SKILL.md must be replaced with that absolute path. *Why it matters:* memory storage is blocked (enterprise billing), so durable setup notes belong in these context files, not Copilot memory.
+
 - **Tool awareness rule** — Copilot should always search its available tools before claiming it can't do something. *Why it matters:* prevents wasted time when MCP tools like ADO are available but not discovered
 - **Custom instructions** — `~/.copilot/copilot-instructions.md` loads globally; `.github/copilot-instructions.md` loads per-repo. *Why it matters:* per-repo is better for team workflows
 - **Launch from workspace folder** — `cd ~\devrel-studios-copilot-workspace && copilot` loads all instructions and context automatically

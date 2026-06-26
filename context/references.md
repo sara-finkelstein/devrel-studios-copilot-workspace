@@ -8,6 +8,15 @@
 - [mvp-copilot-plugins](https://github.com/microsoft/mvp-copilot-plugins) — shared skills repo (youtube-description skill, PR #78)
 - Team skills repo — TBD (will live under manager's GitHub)
 
+## DevRel Studios Plugin (installed skills)
+- Source: [mvp-copilot-plugins/plugins/devrel-studios](https://github.com/microsoft/mvp-copilot-plugins/tree/main/plugins/devrel-studios)
+- Skills installed in `~/.copilot/skills/`: aka-redirect, create-event-episodes, create-studio-support, send-calendar-invite, video-staging, view-to-tam, vtt-metadata, youtube-analysis, youtube-collaborator, youtube-description, youtube-monthly-watchhours
+- Shared scripts (plugin root): `~/.copilot/plugins/devrel-studios/scripts/` — parse-vtt.py, download-comments.py, download-playlist.py
+- The `<PLUGIN_ROOT>` placeholder in vtt-metadata & youtube-analysis SKILL.md was patched to that absolute path
+- Requires `yt-dlp` (installed) — youtube-analysis scripts call `python -m yt_dlp`
+- ADO MCP server (`ado`) from the plugin's `.mcp.json` is already configured in `~/.copilot/mcp-config.json`
+- To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
+
 ## YouTube API
 - Tokens: `~/.copilot/youtube-tokens/` (msdev.json, azd.json, vs.json)
 - Skills: `~/.copilot/skills/youtube-description/` (SKILL.md, youtube-api.js, auth.js)
