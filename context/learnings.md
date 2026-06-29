@@ -4,6 +4,14 @@
 - **[Topic]** — what you learned. *Why it matters:* [context]
 -->
 
+## Office / PowerPoint Automation
+
+- **Download a OneDrive/SharePoint file from a share link (headless)** — in signed-in Edge (Playwright), resolve the file via the shares API: `…/personal/<user>_microsoft_com/_api/v2.0/shares/u!<base64url(sharingUrl)>/driveItem?$select=@content.downloadUrl`. That returns a pre-authenticated `download.aspx?...&tempauth=…` URL you can save with `Invoke-WebRequest`. *Why it matters:* boss's decks/files live in OneDrive, not locally; this grabs them without manual download. (`microsoft-my.sharepoint.com/p/<user>` = that person's personal OneDrive.)
+- **Sensitivity-labeled Office files are encrypted at rest** — header `D0 CF 11 E0` (OLE compound file) instead of `PK` (zip). python-pptx / automation CANNOT read them. Fix: open in *desktop* PowerPoint → set a non-encrypting label (e.g. "General") → **Save As** → header flips to `PK` and it's editable. *Why it matters:* internal decks carry MIP labels; must strip before any programmatic editing. (Decryption only happens in memory; saving is what writes unencrypted bytes.)
+- **Clone a slide so PowerPoint accepts it: use COM `Slides(n).Duplicate()`, NOT python-pptx XML copy** — python-pptx clones open fine in python but PowerPoint/COM reject them ("PowerPoint could not open the file"). Drive PowerPoint via `pywin32` (`win32com.client.Dispatch("PowerPoint.Application")`), `Duplicate()` the source slide (also copies the slide-level `<p:bg>` background), edit text, `SaveAs(path, 24)` natively. *Why it matters:* reliable, PowerPoint-valid PPT editing. (python-pptx shape-copy misses slide-level `<p:bg>`, causing wrong/grey backgrounds.)
+- **Render a PPTX slide to PNG headlessly** — PowerPoint COM `Slides(n).Export(path, "PNG", 1920, 1080)`; needs no other PowerPoint instance running. *Why it matters:* preview slides directly in the terminal.
+- **Grab a screenshot straight from the clipboard** — after Win+Shift+S: `Add-Type -AssemblyName System.Windows.Forms,System.Drawing; [System.Windows.Forms.Clipboard]::GetImage().Save($path)` then view the PNG. *Why it matters:* fastest way for Sara to show Copilot what's on her screen — no file save/attach needed.
+
 ## Copilot Tips
 
 - **Installing plugin skills manually** — skills from mvp-copilot-plugins are just folders; download each `SKILL.md` (+ any scripts) into `~/.copilot/skills/`. Shared scripts go in a plugin root (`~/.copilot/plugins/devrel-studios/`) and the `<PLUGIN_ROOT>` placeholder in SKILL.md must be replaced with that absolute path. *Why it matters:* memory storage is blocked (enterprise billing), so durable setup notes belong in these context files, not Copilot memory.
