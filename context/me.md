@@ -20,6 +20,10 @@
 - GitHub Copilot CLI
 - VS Code
 
+## File Saving Preferences
+- **Default save location for deliverables** (Excel, Word, etc.): `C:\Users\sfinkelstein\Documents` (e.g., a project subfolder like `Documents\Behind the Code`) — not the Desktop, which I rarely use
+- I keep a lot of files in SharePoint too; Copilot can read SharePoint via Work IQ but can't save to it directly unless the folder is synced locally via OneDrive
+
 ## How I Prefer to Work
 - Be direct but include the logic — I want short answers with the reasoning, not just bare results
 - Use a conversational tone with step-by-step instructions when showing how to do something
