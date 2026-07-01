@@ -8,6 +8,7 @@
 ## Friction Points
 <!-- Things that take multiple attempts, require manual steps, or slow you down -->
 
+- **Doc generate → close-in-Word → regenerate loop** — generating the FY26 report from a Python script meant every tweak required Sara to close the doc in Word or hit `PermissionError`/`-v2` fallback saves, and she couldn't hand-edit without being clobbered on regen. **Resolved:** switched to doc-as-source-of-truth ("Path A") — Sara hand-edits the OneDrive master, Copilot stops regenerating and hands over paste-ready snippets instead. *Takeaway:* for collaborative/near-final docs, hand editing beats regeneration; offer the switch early.
 - **Accepting YouTube collaboration invites** — repeatedly a sticking point across sessions: confusion over which account/channel must be active and which direction the accept URL goes. Resolved (collaborator-first URL + collaborator as active channel); now documented in the youtube-collaborator skill and learnings.md.
 
 ## Skill Candidates

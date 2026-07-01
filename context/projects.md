@@ -4,6 +4,15 @@
 
 ## Active
 
+### FY26 Impact & ROI Report (for James — leadership)
+- **Status:** near-final; master owned by Sara, pending a few manual edits
+- **What:** Single leadership Word doc + companion Excel workbook — *what we did → how much we saved vs. outsourcing → impact.* Straightforward tone (not braggy). Headline reach = all-up ~80M views / 3.2M watch hours (Aurea's numbers); flagship YouTube table as supporting detail.
+- **Source of truth = the doc (Path A):** master is Sara's hand-edited OneDrive file `OneDrive - Microsoft\FY26 Impact Report\DevRel-Studios-FY26-Impact-Report.docx` (shared folder, also holds the `.xlsx`). Copilot does NOT regenerate/overwrite it — the `gen_combined_report.py`/`gen_report_workbook.py` generators are retired; Copilot provides paste-ready snippets instead.
+- **Cost-avoidance total:** $7,752,323, going to **$7,777,323** once the new "Executive communication (bespoke production)" line (+$25K, bottom-up agency estimate) is added. Point-by-point to-do list for that edit already delivered (6 number swaps + 2 new table rows).
+- **Money ledgers never summed:** cost avoidance vs. funded-by-others ($78,604 cross-charges) vs. promo ad-buys ($318,000).
+- **Open follow-ups:** (1) Sara to hand-apply the exec-comm line edits; (2) confirm Imagine Cup scope (may lower below $400K); (3) authoritative series view counts from Aurea; (4) click Share on the OneDrive folder to grant James + Patrick access; (5) mirror the exec-comm line into the workbook.
+- **Note:** Anthropic appears twice (MCP Dev Days partnership) — verified accurate from the July MBR; Sara chose to keep.
+
 ### "Behind the Code" — one-slide pitch (boss's template)
 - **Status:** slide built, in review (2 open cosmetic follow-ups)
 - **What:** Added a new **SHOW 04 · Behind the Code** slide to the July Studio Update deck by cloning the existing "Built It" show-slide template (PowerPoint COM `Duplicate()`), then mapping the pitch into the FORMAT / THE PITCH / 3-blocks / SUCCESS skeleton.
