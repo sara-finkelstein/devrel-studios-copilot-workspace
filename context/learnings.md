@@ -4,6 +4,10 @@
 - **[Topic]** — what you learned. *Why it matters:* [context]
 -->
 
+## Work IQ
+
+- **Read a spreadsheet's actual rows by passing its file URL** — a plain Work IQ `ask` about presenters in the "Past and upcoming talks" sheet only surfaced 2 of 8; passing the file's SharePoint URL directly via the `fileUrls` parameter made it read the real rows and return all 8 with deck/recording links. *Why it matters:* for guest discovery from the Talks catalog, hand Work IQ the file URL — don't rely on open enterprise search, which misses most rows.
+
 ## Office / PowerPoint Automation
 
 - **Download a OneDrive/SharePoint file from a share link (headless)** — in signed-in Edge (Playwright), resolve the file via the shares API: `…/personal/<user>_microsoft_com/_api/v2.0/shares/u!<base64url(sharingUrl)>/driveItem?$select=@content.downloadUrl`. That returns a pre-authenticated `download.aspx?...&tempauth=…` URL you can save with `Invoke-WebRequest`. *Why it matters:* boss's decks/files live in OneDrive, not locally; this grabs them without manual download. (`microsoft-my.sharepoint.com/p/<user>` = that person's personal OneDrive.)
