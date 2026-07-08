@@ -17,6 +17,8 @@
 
 ## Copilot Tips
 
+- **ADO comments can't be edited via the API** — the `wit_add_work_item_comment` MCP tool only creates new comments; there's no edit/update for an existing one. To amend a note (e.g. add a signature after the fact), post a short follow-up comment referencing the prior one. *Why it matters:* set the full comment (including any required sign-off) correctly the first time to avoid double comments.
+
 - **Installing plugin skills manually** — skills from mvp-copilot-plugins are just folders; download each `SKILL.md` (+ any scripts) into `~/.copilot/skills/`. Shared scripts go in a plugin root (`~/.copilot/plugins/devrel-studios/`) and the `<PLUGIN_ROOT>` placeholder in SKILL.md must be replaced with that absolute path. *Why it matters:* memory storage is blocked (enterprise billing), so durable setup notes belong in these context files, not Copilot memory.
 
 - **Tool awareness rule** — Copilot should always search its available tools before claiming it can't do something. *Why it matters:* prevents wasted time when MCP tools like ADO are available but not discovered

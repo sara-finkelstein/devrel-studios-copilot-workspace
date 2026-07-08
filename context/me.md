@@ -31,6 +31,8 @@
 - Tell me if I'm wrong — don't sugarcoat it
 - I don't write code, so explain technical concepts in plain language and handle the implementation yourself
 - Don't make me do busywork that can be automated — especially in ADO
+- Prefer handling my ADO updates (comments, states, fields) through the Copilot CLI rather than sending me to the ADO web UI — it's faster and saves me from keeping tabs open. Confirm before writing when the target item is ambiguous or the change is hard to undo.
+- When writing comments/notes to my ADO work items, always sign the note with a final line: `Written by ADO MCP server via CLI`
 
 ## Skills and Experience
 - **Strong at:** Working with people, creative direction, making good films
