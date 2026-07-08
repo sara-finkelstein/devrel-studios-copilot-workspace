@@ -25,6 +25,7 @@
 - I keep a lot of files in SharePoint too; Copilot can read SharePoint via Work IQ but can't save to it directly unless the folder is synced locally via OneDrive
 
 ## How I Prefer to Work
+- **Model:** trialing `auto` (Copilot picks per task) to balance speed and quota with quality. Value good work products over raw speed — if `auto` produces thin results on complex work (e.g., reports, slide automation), switch to Opus 4.8 via `/model`. May revert to a fixed model if `auto` underdelivers.
 - Whenever you point me to a file, folder, or resource, always include a clickable link (e.g., a `file:///` link for local files, or the URL for online resources) — don't just give me the path as text
 - Be direct but include the logic — I want short answers with the reasoning, not just bare results
 - Use a conversational tone with step-by-step instructions when showing how to do something
