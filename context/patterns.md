@@ -5,8 +5,6 @@
 ## Repeated Workflows
 <!-- Tasks you do more than twice that could become a skill or automation -->
 
-- **Update ADO work items via CLI** — find the work item by plain-language description (search_workitem), confirm the target when ambiguous, then add a comment / change state via the ADO MCP tools instead of the ADO web UI. Seen 3x on 7/8 (Proposal #232484 note, Episode #222346 note, signature follow-ups). Faster than the web UI and lets Sara skip keeping ADO tabs open. *Suggested skill:* "add a note to [work item description]" → resolve item, confirm if >1 match, post comment signed `Written by ADO MCP server via CLI`. Strong skill candidate at 3+ uses.
-
 ## Friction Points
 <!-- Things that take multiple attempts, require manual steps, or slow you down -->
 
@@ -20,3 +18,5 @@
 
 ## Promoted to Skills
 <!-- Patterns that became skills — kept here for history -->
+
+- **Add a note to an ADO work item** → `skills/ado-add-note.md` (promoted 7/8, after 3× use). Resolve item by plain-language search, confirm if >1 match, post comment signed `Written by ADO MCP server via CLI`. Kept local (not team-shared) — signature is Sara's personal convention.
