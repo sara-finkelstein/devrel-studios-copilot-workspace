@@ -4,6 +4,19 @@
 - **[Topic]** — what you learned. *Why it matters:* [context]
 -->
 
+## YouTube Analytics & Content Autopsy
+
+- **YouTube Analytics API ≠ Data API** — host `youtubeanalytics.googleapis.com`, path `/v2/reports`, scope `yt-analytics.readonly` (msdev token already had it). Returns core metrics, the **audience retention curve** (`metrics=audienceWatchRatio,relativeRetentionPerformance` + `dimensions=elapsedVideoTimeRatio`, 100 points), and **traffic sources**. Query shape: `?ids=channel==MINE&startDate=X&endDate=Y&filters=video==ID&metrics=...&dimensions=...`. *Why it matters:* this is what powers diagnostic post-production analysis beyond vanity metrics; occasional HTTP 500s just need a retry.
+- **Thumbnail CTR & impressions are NOT in the Analytics API** — `impressions` and `impressionsClickThroughRate` are rejected as "Unknown identifier" (only card/annotation CTR exists). They also **cannot be derived** — impressions (the denominator) live nowhere in the API and views ≠ impressions. Only source = **YouTube Studio → Advanced Mode → Content → Export CSV**. *Why it matters:* any CTR feature must take a manual Studio export as input.
+- **Studio CSV shape & gotchas** — headers: `Content,Video title,Video publish time,Duration,Views,Watch time (hours),Subscribers,Estimated revenue (USD),Impressions,Impressions click-through rate (%)`. The `Content` column = video ID (**trim** the leading space on IDs starting with `-`); row 2 = `Total` (skip). Export has a **row cap** — the Advanced Mode table lazy-loads ~500 rows and exports only what's loaded, so low-view videos get cut. **Fix: filter the table** (Filter box → title contains "X") to export just the target videos. Also: a custom date range needs the **Apply** button or it silently doesn't take. *Why it matters:* saves a lot of re-export churn.
+- **Sprinklr dead-end for YouTube CTR** — msdev/"Microsoft Developer" is NOT provisioned to Sara's Sprinklr user (Account filter empty, "No results" for MSDev), and its Social Engagement > YouTube dashboard only carries standard YouTube-API metrics (no thumbnail CTR). *Why it matters:* don't route YouTube CTR through Sprinklr — use the Studio export.
+
+## Office / Document Generation (Windows)
+
+- **docx validator crashes on Windows console encoding** — the docx skill's `validate.py` prints a `→` arrow and dies with a cp1252 `UnicodeEncodeError`, and can misreport a fake `numbering.xml` error. **Fix:** set `$env:PYTHONUTF8="1"; $env:PYTHONIOENCODING="utf-8"` before running it — then it passes cleanly. *Why it matters:* the doc was fine; only the validator's stdout was broken.
+- **No local PPTX/PDF render for docx** — the skill's `soffice.py` shim is Unix-only (`socket.AF_UNIX`) and `pdftoppm` isn't installed, so docx→image preview fails on this machine. *Why it matters:* validate structurally instead; can't visually preview a generated .docx here.
+- **Generated .docx locked while open in Word** — regenerating over a file Sara has open throws `EBUSY`. *Why it matters:* save to a new filename (e.g. `(v2)`) rather than fighting the lock, same lesson as the FY26 report.
+
 ## Work IQ
 
 - **Read a spreadsheet's actual rows by passing its file URL** — a plain Work IQ `ask` about presenters in the "Past and upcoming talks" sheet only surfaced 2 of 8; passing the file's SharePoint URL directly via the `fileUrls` parameter made it read the real rows and return all 8 with deck/recording links. *Why it matters:* for guest discovery from the Talks catalog, hand Work IQ the file URL — don't rely on open enterprise search, which misses most rows.
@@ -37,5 +50,5 @@
 
 ## Tool Tips
 
-- **YouTube API channels set up:** msdev, azd, vs — tokens at `~/.copilot/youtube-tokens/`
+- **YouTube API channels set up:** azd, dotnet, msdev, reactor, vs (6 total, +credentials.json) — tokens at `~/.copilot/youtube-tokens/`
 - **youtube-api.js** enhanced to include statistics (views, likes, comments) in `get` command

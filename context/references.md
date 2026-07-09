@@ -18,9 +18,11 @@
 - To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
 
 ## YouTube API
-- Tokens: `~/.copilot/youtube-tokens/` (msdev.json, azd.json, vs.json)
+- Tokens: `~/.copilot/youtube-tokens/` — 6 channels: azd, dotnet, msdev, reactor, vs (+ credentials.json)
 - Skills: `~/.copilot/skills/youtube-description/` (SKILL.md, youtube-api.js, auth.js)
-- Channels authorized: msdev, azd, vs
+- **Content Autopsy skill:** `~/.copilot/skills/content-autopsy/` (autopsy.js + SKILL.md) — diagnostic retention/traffic/CTR analysis (see projects.md)
+- Re-auth a channel: `node ~/.copilot/youtube-tokens/auth.js <channel>` (needed ~weekly — app is in test mode)
+- Channels authorized: azd, dotnet, msdev, reactor, vs
 
 ## Microsoft Internal
 - General 222155 — Copilot onboarding work item

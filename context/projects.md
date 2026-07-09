@@ -4,6 +4,14 @@
 
 ## Active
 
+### Content Analytics / Post-Production Intelligence
+- **Status:** Phase 0 + Phase 1 done (7/8–7/9); usable now
+- **What:** Diagnostic "content autopsy" of published videos — retention curves, traffic sources, subscriber conversion, and thumbnail CTR — to surface post-production blind spots beyond views/likes.
+- **Content Autopsy skill (BUILT):** `~/.copilot/skills/content-autopsy/` (`autopsy.js` + `SKILL.md`). Pulls retention/traffic/core metrics live from the YouTube Analytics API; merges thumbnail Impressions + CTR from a YouTube Studio "Table data" CSV export. Auto-loads. Trigger: *"run a content autopsy on [video]"*. Run: `node autopsy.js <channel> --video <id>|--query "<search>" [--ctr-csv "<path>"] [--compact]`.
+- **First real use:** full **MVP Unplugged** series analysis (all 4 episodes, msdev) → shareable Word doc for Justin at `Documents\YT Analytics\MVP Unplugged - Content Performance Review (v2 softened).docx` (tone softened for a senior audience — findings framed as observations + questions).
+- **Key finding:** all 4 episodes below the 3.12% channel CTR baseline → packaging is the series-wide weakness; weak first-10% hooks second; discovery/search third. Foundry ep (best CTR + search) got the most impressions — algorithmic flywheel visible.
+- **Next / phases available:** Phase 2 = build channel baselines; Phase 3 = show-level trend intelligence across more series; Bonus = retrofit `youtube-monthly-watchhours` to pull retention/CTR live.
+
 ### FY26 Impact & ROI Report (for James — leadership)
 - **Status:** near-final; master owned by Sara, pending a few manual edits
 - **What:** Single leadership Word doc + companion Excel workbook — *what we did → how much we saved vs. outsourcing → impact.* Straightforward tone (not braggy). Headline reach = all-up ~80M views / 3.2M watch hours (Aurea's numbers); flagship YouTube table as supporting detail.
@@ -47,8 +55,8 @@
 
 ### YouTube API Setup
 - **Status:** complete
-- **What:** Set up YouTube Data API OAuth for 3 channels (msdev, azd, vs) and enhanced youtube-api.js with view count stats
-- **Notes:** Quest to Compile Ep 1 has 2,526 views as of May 15
+- **What:** Set up YouTube Data API OAuth and enhanced youtube-api.js with view count stats
+- **Notes:** Tokens actually exist for **6 channels** — azd, dotnet, msdev, reactor, vs (+ credentials.json), not just 3. msdev re-authed 7/8. Quest to Compile Ep 1 had 2,526 views as of May 15.
 
 ## On Hold
 

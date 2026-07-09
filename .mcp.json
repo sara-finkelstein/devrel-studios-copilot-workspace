@@ -17,7 +17,7 @@
     "filesystem": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${userHome}"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\sfinkelstein"]
     }
   }
 }
