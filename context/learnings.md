@@ -46,6 +46,7 @@
 
 ## Workflow Tips
 
+- **Sync shared repos before skill work** — for `mvp-copilot-plugins`, always fetch/rebase from latest upstream before creating or editing skills, then open PR from the fresh branch state. *Why it matters:* avoids stale-snapshot PRs that regress docs/skill counts and trigger avoidable review churn.
 - **Accepting a YouTube collaboration invite (brand channels)** — dotnet, Microsoft Developer, and Microsoft Reactor are all brand channels under Sara's single Google account, so you never sign out or use InPrivate (a private window just starts with no session). To accept: (1) switch the active channel to the collaborator via avatar → switch channel, then (2) open the **collaborator-first** URL `studio.youtube.com/channel/{collaboratorChannelId}/collaboration/{ownerChannelId}`. *Why it matters:* the owner-first URL always shows "Oops, you don't have permission" — both conditions must be true to see the Accept prompt.
 - **YouTube API OAuth setup** — run `node ~/.copilot/youtube-tokens/auth.js <channel>` for each channel, authorize in browser, tokens auto-refresh
 - **YouTube video stats** — `node ~/.copilot/skills/youtube-description/youtube-api.js <channel> get <videoId>` returns views, likes, comments

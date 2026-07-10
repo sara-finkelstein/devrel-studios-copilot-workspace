@@ -41,6 +41,7 @@
 - Prefer API/tool-native workflows over browser automation. Use Playwright only when absolutely necessary (e.g., browser-gated Frame.io/SharePoint steps with no stable API path).
 - In stakeholder-facing summaries, avoid the abbreviation "WI" — use "Episode work item ID" instead.
 - In stakeholder-facing summaries, avoid naming specific browser automation tooling; describe the workflow in capability terms (API/tool-native first, browser fallback only when required).
+- Before starting any skill packaging/update work in shared repos (especially `mvp-copilot-plugins`), always sync against latest upstream first (fetch + rebase/pull), verify branch is current, then make changes. Never build a PR from stale repo state.
 
 ## Skills and Experience
 - **Strong at:** Working with people, creative direction, making good films
