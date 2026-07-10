@@ -62,6 +62,12 @@
 
 ## Recently Completed
 
+### Transcript-proofread skill validation (PR #217)
+- **Status:** completed (7/10)
+- **What:** Downloaded and tested the new `transcript-proofread` skill from `microsoft/mvp-copilot-plugins` PR #217 end-to-end using a real YouTube caption export, generated corrected clean captions, and uploaded the corrected track to YouTube.
+- **PR outcome:** PR #217 is approved by Sara. Local hardening edits were intentionally left unpushed.
+- **Reference video tested:** https://youtu.be/5YnH1gTI1Yg
+
 ### Copilot Workspace Setup
 - **Status:** complete
 - **What:** Forked from Cameron's template, added tool-awareness rule, ran setup interview to build `context/me.md`
