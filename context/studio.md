@@ -7,6 +7,7 @@
 
 - In-house video production team (formerly Channel 9 Studios)
 - Located in Building 25, Room 1332, Redmond campus
+- **Naming gotcha:** there's an unrelated Microsoft office building on the Redmond campus also called "Studio B" in the employee directory — it has no connection to DevRel Studios' own Stage B. Don't assume someone whose office is listed as "Studio B/####" works near/in the DevRel Studios space; it's a coincidence of naming, not proximity.
 - Produces content for Microsoft Developer YouTube channels and Microsoft Learn Shows
 - Mission: Engage, educate, and entertain technical communities with visual media
 
@@ -24,7 +25,7 @@
 | Phase | Key Activities |
 |-------|---------------|
 | **Pre-production** | Project brief, ADO ingestion, scheduling (T-minus approach), graphics/thumbnails in Figma, speaker readiness |
-| **Production** | 3 studio stages (A/B/C), StreamYard for recording/livestream, TriCaster, crew roles assigned |
+| **Production** | 3 studio stages — **Stage A** (biggest), **Stage B** (small), **Stage C** (set up for podcasts) — StreamYard for recording/livestream, TriCaster, crew roles assigned |
 | **Post-production** | Editing (Adobe Premiere/After Effects), review via Frame.io, thumbnails, chaptering, captions (14 languages) |
 | **Publication** | Microsoft Learn Shows (GitHub contributor model) and YouTube channels |
 
@@ -56,6 +57,10 @@
 - **Shows**: >200K views/year, >10K watch hours, 10% YoY growth
 - **Events**: >200K on-demand views/3 months, millions of impressions
 - Tagged with 1-2 objectives: Relationships, Reach, Growth, Developer Action, Experimentation
+
+## Guest Filming Eligibility
+
+- Anyone based on the Redmond campus, or nearby (e.g., Kirkland), is fine to film with in-studio. Guests based further out (e.g., New York City) are not viable for in-person studio recording without a separate remote/travel plan.
 
 ## Team Roles (Key)
 

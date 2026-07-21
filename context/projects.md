@@ -4,6 +4,49 @@
 
 ## Active
 
+### 📌 Teams-reaction → OneNote to-do capture (new automation)
+- **Status:** live (set up 7/21) — recurring scan running
+- **What:** Sara reacts 📌 to any Teams message with an action item. A scheduled Copilot prompt (weekdays 9am/12pm/3pm/6pm) scans for newly-pinned messages via Work IQ, classifies each into one of Sara's 6 OneNote themes, and appends a checkbox line to `context/pinned-teams-digest.md` for Sara to paste into her real OneNote herself.
+- **Why manual paste, not direct write:** Work IQ has no OneNote API access at all, and OneNote desktop COM automation is broken on this machine ("Library not registered" — likely Click-to-Run typelib issue). There's also a real prior incident where an automated write overwrote/overlapped Sara's OneNote content via sync conflict. See `context/learnings.md` and `patterns.md` (Friction Points).
+- **Files:** `context/pinned-teams-digest.md` (staging area, grouped by theme), `context/pinned-teams-state.json` (dedup tracking).
+- **Next:** revisit direct OneNote automation only if an Office repair/reinstall resolves the COM registration error.
+
+### Fabric Tech Talk Fridays & Fabric Executive Insights — status tracking
+- **Status:** assessed 7/20; iteration paths cleaned up
+- **What:** Reviewed both ADO Shows (#174864 FTTF, #224267 FEI) for outstanding work.
+- **FTTF outstanding (as of 7/20):** 4 episodes stuck in Publication (upload/publish subtasks not started): Shannon Lindsay (231676), Ashley Felts (231681), Porsche Cup & Kumulus (225198), AvePoint (228756). 2 on Hold: Kalyan Kaki (182347), Heini Ilmarinen (198295). 1 new unreviewed proposal: SMB Cost Clarity + Pricing series (236026, desired publish 9/7/26).
+- **FEI outstanding (as of 7/20):** Post Production — dbt + Fabric (228786), Kim Manis/Nathalie D'Hers (232500). Production — Bogdan Crivat/Patrice Pelland (233043), Kanwal Safdar/Yitzhak Kesselman (233550, no movement since 6/25). Hold — Financial Services Leaders (227316), Open Data Interoperability (227885). Postmortem (224268) not started.
+- **Done 7/20:** bulk-updated all 63 non-conforming FTTF child work items (Episodes, Editing/Uploading/Publishing, Graphics, Shorts) to Iteration Path `Studios\FY26`. FEI intentionally left untouched per Sara's request.
+- **Open:** Swetha flagged a thumbnail change needed on episode 228786 (dbt + Fabric, FEI) before it can publish — specifics TBD, confirm with Swetha/graphics.
+
+### "Infra Series" (new show, under development) — Azure infrastructure/Kubernetes content
+- **Status:** guest discovery + booking sheet in progress
+- **What:** New DevRel Studios series covering Azure's cloud infrastructure layer — the technology that runs Kubernetes (the system that manages containers, the small packaged units of software companies run at scale), container registries, networking, and the reliability engineering behind it.
+- **Booking sheet:** `Documents\Behind the Code\Infra Series - Producer Booking Sheet.xlsx` — tabs: "Producer Booking Sheet" (episodes, has an added "Location" column), "Resource Links", "Presenter Talks" (candidate pool, unbooked names go here first).
+- **Org structure to know (Azure Core, under Girish Bablani → Scott Guthrie → Satya Nadella):**
+  - **Girish Bablani** — leads all of Azure Core (compute, storage, networking — the whole thing).
+  - **Brendan Burns** — reports to Girish Bablani; co-creator of Kubernetes; leads the "Cloud Native & Management" pillar within Azure Core (containers, control planes) — this is the specific slice the series is about. Has 17 direct reports.
+  - Not everyone relevant to the series reports through Brendan Burns — e.g. **Karthik Uthaman** (Azure Networking/Front Door, DDoS protection) reports through a separate networking chain (Varun Chawla → Abhishek Tiwari → Igor Sakhnov → Girish Bablani), bypassing Brendan Burns entirely.
+- **NOT actually booked — all under research (corrected 7/17):** the episode list below is Sara's research candidates, not confirmed bookings. Episode order in the sheet was renumbered 7/17: **Ep1** Chandan Aggarwal/Neha Aggarwal (Agent Fabric network security); **Ep2** Karthik Uthaman (Azure Stormbreaker DDoS protection); **Ep3** Ravi Kiran Reddy (VMSS instance placement); **Ep4** Gunjan Bansal/Dishant Upadhaye (EagleAI diagnostics); **Ep5** Mauricio Garcia/Hozefa Karachiwala (AI infrastructure) — **moved to last + flagged ineligible**: not confirmed part of Azure Core, and not confirmed local (Redmond/Kirkland). Noted directly on the row in the sheet; cannot use unless a local Azure Core Baremetal engineer is found. Other guests (Ep1-4) not yet re-validated against the Azure-Core + local bar.
+- **Candidate presenters added (not yet booked), all Brendan Burns' direct reports:**
+  - **Sajay Antony** — Group Engineering Manager, Azure Container Registry. Based in Redmond, WA. Strong on-camera presence (MVP-circuit speaker, ~15 talks on Kubernetes/containers/security/observability). Public talk: "Introduction to project ORAS" on Open at Microsoft (with Toddy Mladenov). Story angle: shipped IPv6 dual-stack endpoints for Azure Container Registry as public preview (June 2026) — good hook for a cost/tradeoff-of-upgrading-internet-addressing episode.
+  - **Akash Singhal** — Software Engineer II, Azure Container Registry. Based in Redmond, WA (Seattle area). Built the "artifact cache" feature (lets teams cache public container images locally instead of re-pulling every time — saves cost/speed, avoids public registry rate limits).
+  - **Khaled "Kal" Henidak** — Principal Software Engineer; Kubernetes networking expert (dual-stack IPv4/IPv6, Azure CNI); KubeCon keynote speaker. Location not yet verified.
+  - **Jake Welch** — Principal Group Engineering Manager, Site Reliability Engineering; based in **New York City** (not Redmond — confirmed by Sara 7/17). Started Azure's first SRE pilot (2014); USENIX/SREcon speaker on Azure Storage reliability.
+- **Content pillars for the series:** supply chain security (containers), Kubernetes/container networking, site reliability engineering, control plane architecture, cost/reliability tradeoffs of infrastructure upgrades.
+- **Next:** vet Vitaly Voloshin, Ganesh Gopal, Pritesh Patwa (other Brendan Burns reports, no public speaking history found yet); confirm booking order/scheduling for the 3 viable new candidates (Jake Welch removed — based in NYC, out of filming range).
+- **Guest filming eligibility:** Redmond campus or nearby (e.g., Kirkland) only — see `studio.md`. Sajay Antony, Akash Singhal, and Khaled Henidak all qualify.
+
+- **Content briefing (plain-language, for Sara's own understanding):**
+  - **Kubernetes** — an "orchestration layer": it doesn't run application code itself, it manages where and how containers (small self-contained packages of software) run across many servers — starting them, restarting failures, spreading load, coordinating updates. Think of a conductor directing musicians. Microsoft co-created it (Brendan Burns is one of its original creators).
+  - **What worries people about AI + orchestration/cloud computing** (rich territory for episode angles):
+    - **Cost** — AI workloads are expensive; usage spikes unpredictably, hard to forecast/control spend.
+    - **Scale/capacity** — AI demand spikes are huge and sudden; can the system keep up without crashing or queueing?
+    - **Reliability** — long-running AI jobs (training, big inference batches) don't restart cleanly like a simple web app if a container fails mid-task.
+    - **Security/isolation** — AI workloads handle sensitive data; containers/agents increasingly talk to each other automatically, raising fear that one compromised piece reaches data/resources it shouldn't (maps to Ep2's "what breaks when agents talk to each other").
+    - **Specialized hardware** — AI needs specific chips; scheduling "put this container only on a machine with the right chip, without wasting an idle expensive one" is much harder than regular cloud computing.
+    - **Complexity/opacity** — as more AI-driven automation gets added (e.g. Ep5's "AI diagnosing Azure itself"), people worry about trusting a system they can't fully see inside of.
+
 ### Content Analytics / Post-Production Intelligence
 - **Status:** Phase 0 + Phase 1 done (7/8–7/9); usable now
 - **What:** Diagnostic "content autopsy" of published videos — retention curves, traffic sources, subscriber conversion, and thumbnail CTR — to surface post-production blind spots beyond views/likes.

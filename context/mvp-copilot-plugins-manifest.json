@@ -1,0 +1,122 @@
+{
+  "repo": "microsoft/mvp-copilot-plugins",
+  "local_source_path": "C:\\Users\\sfinkelstein\\AppData\\Local\\copilot\\plugin-sources\\mvp-copilot-plugins",
+  "last_synced_commit": "e04babced657269738e675cd13a66ce28b28fa31",
+  "last_synced_at": "2026-07-15T16:03:09.0365462-07:00",
+  "installed_plugins": [
+    "github-workflow"
+  ],
+  "all_available_plugins": [
+    {
+      "plugin": "devrel-ado-wiki",
+      "skills": "answer-devrel-ado-wiki-question"
+    },
+    {
+      "plugin": "devrel-events",
+      "skills": "travel-request-reminder"
+    },
+    {
+      "plugin": "devrel-studios",
+      "skills": [
+        "aka-redirect",
+        "create-event-episodes",
+        "create-studio-support",
+        "send-calendar-invite",
+        "transcript-proofread",
+        "video-staging",
+        "view-to-tam",
+        "vtt-metadata",
+        "youtube-analysis",
+        "youtube-collaborator",
+        "youtube-description",
+        "youtube-monthly-watchhours"
+      ]
+    },
+    {
+      "plugin": "eventcontent-ado-wiki",
+      "skills": "answer-eventcontent-ado-wiki-question"
+    },
+    {
+      "plugin": "github-workflow",
+      "skills": [
+        "agent-session-insights",
+        "full-validate",
+        "git-commit-changes",
+        "git-worktree-start",
+        "github-issue-capture",
+        "github-issue-close",
+        "github-issue-comment",
+        "github-issue-eod-summary",
+        "github-issue-groom",
+        "github-issue-list",
+        "github-issue-merge",
+        "github-issue-relationships",
+        "github-issue-retrieve",
+        "github-issue-split",
+        "github-issue-start",
+        "github-plugin-candidate-capture",
+        "github-pr-merge-conflict-resolution",
+        "github-pr-review",
+        "github-pr-review-feedback",
+        "github-pr-submission",
+        "github-security-scan-issue",
+        "quick-validate"
+      ]
+    },
+    {
+      "plugin": "mvp-ado-platform",
+      "skills": "report-polaris-platform-bug"
+    },
+    {
+      "plugin": "mvp-ado-platform-current",
+      "skills": [
+        "create-platform-intake-from-snow-ticket",
+        "report-platform-bug"
+      ]
+    },
+    {
+      "plugin": "mvp-ado-program",
+      "skills": [
+        "assign-mvp-work-items",
+        "capture-mvp-backlog-snapshot",
+        "create-mvp-action",
+        "create-mvp-issue",
+        "create-mvp-work-item",
+        "create-mvp-work-item-from-snow-ticket",
+        "move-past-iteration-items",
+        "review-mvp-at-risk-items",
+        "review-mvp-backlog-health",
+        "review-mvp-follow-up-hygiene",
+        "review-stale-mvp-iterations",
+        "update-mvp-work-item"
+      ]
+    },
+    {
+      "plugin": "mvp-ado-summit",
+      "skills": [
+        "create-mvp-summit-bug",
+        "create-mvp-summit-feature-request"
+      ]
+    },
+    {
+      "plugin": "mvp-operations",
+      "skills": "snow-ticket-capture"
+    },
+    {
+      "plugin": "mvp-program-hub",
+      "skills": "answer-mvp-program-hub-question"
+    },
+    {
+      "plugin": "mvp-program-wiki",
+      "skills": "answer-mvp-program-wiki-question"
+    },
+    {
+      "plugin": "mvpdl-emails",
+      "skills": "answer-mvpdl-emails-question"
+    },
+    {
+      "plugin": "studios-ado-wiki",
+      "skills": "answer-studios-ado-wiki-question"
+    }
+  ]
+}

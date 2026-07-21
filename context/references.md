@@ -17,6 +17,29 @@
 - ADO MCP server (`ado`) from the plugin's `.mcp.json` is already configured in `~/.copilot/mcp-config.json`
 - To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
 
+### What to say → which skill fires (kept current during repo sync checks)
+Skills trigger automatically from natural language — no need to name them. Table below is refreshed each time a `mvp-copilot-plugins` sync/freshness check runs, so it always reflects what's actually installed.
+
+| If you say something like... | Skill that kicks in | What you need to provide (starting point) |
+|---|---|---|
+| "Book studio time" / "schedule a recording" | create-studio-support | Speaker name, studio stage (A/B/C), start time |
+| "Create episodes for this event" / paste a session list | create-event-episodes | The ADO Event ID + a pasted Topic/Speaker table, Loop doc, Excel export, or run-of-show |
+| "Stage this video" / "upload to msdev" | video-staging | The finished `.mp4` file (transcript optional — I can generate metadata without one) |
+| "Process this transcript/VTT" / "generate titles" | vtt-metadata | A `.vtt` or `.srt` transcript file |
+| "Generate metadata and write it to ADO" (with a prior episode style to match) | create-episode-metadata-from-transcripts | A transcript/video + the Episode work item ID (I find a prior published episode myself to match house style) |
+| "Pull the resource links from the deck" (MVP Unplugged only) | mvp-unplugged-links | The Episode work item ID (I locate the shared deck myself) |
+| "Update YouTube description" / "sync ADO to YouTube" | youtube-description | The ADO Episode work item ID (fields must already be filled in there) |
+| "Add a YouTube collaborator" | youtube-collaborator | The ADO work item ID or YouTube video URL + the collaborator's channel name |
+| "Generate chapter markers" | video-chapters | The video file itself (I transcribe it locally) |
+| "Analyze YouTube/livestream comments" | youtube-analysis | The video, livestream, or playlist URL |
+| "Content autopsy" / "why did this video do well" | content-autopsy | The YouTube video URL (channel token must exist); a Studio CSV export is optional for CTR data |
+| "View to TAM" / "how did this video perform" | view-to-tam | The YouTube video URL |
+| "Create an aka.ms redirect" | aka-redirect | Target URL, desired short path name, your alias |
+| "Send calendar invite for a recording" | send-calendar-invite | The Episode work item ID |
+| "Proofread this transcript" | transcript-proofread | A `.vtt`/`.srt` transcript file |
+| "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
+
+
 ## YouTube API
 - Tokens: `~/.copilot/youtube-tokens/` — 6 channels: azd, dotnet, msdev, reactor, vs (+ credentials.json)
 - Skills: `~/.copilot/skills/youtube-description/` (SKILL.md, youtube-api.js, auth.js)

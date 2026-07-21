@@ -12,6 +12,9 @@
 - Track projects and deliverables in ADO — **all my ADO work lives in the `Studios` project (org: `devrel`, i.e. dev.azure.com/devrel)**. Default here for any work item lookups.
 - YouTube channel management (msdev, azd, vs)
 
+## People I Work With
+- **Manager:** Golnaz Alibeigi
+
 ## Tools I Use Daily
 - Email, Microsoft Teams
 - Editing platforms (Adobe Premiere Pro / After Effects)
@@ -34,6 +37,7 @@
 - Tell me if I'm wrong — don't sugarcoat it
 - I don't write code, so explain technical concepts in plain language and handle the implementation yourself
 - Don't make me do busywork that can be automated — especially in ADO
+- Proactively alert me once daily about publishing dates that are 2 days away or less across my projects
 - Prefer handling my ADO updates (comments, states, fields) through the Copilot CLI rather than sending me to the ADO web UI — it's faster and saves me from keeping tabs open. Confirm before writing when the target item is ambiguous or the change is hard to undo.
 - When writing comments/notes to my ADO work items, always sign the note with a final line: `Written by ADO MCP server via CLI`
 - If I say to follow an existing series/style pattern, mirror it exactly (all sections, marker styles, order, and placement rules). Only originate a new style when no valid reference exists or I explicitly ask for a change.
@@ -42,6 +46,9 @@
 - In stakeholder-facing summaries, avoid the abbreviation "WI" — use "Episode work item ID" instead.
 - In stakeholder-facing summaries, avoid naming specific browser automation tooling; describe the workflow in capability terms (API/tool-native first, browser fallback only when required).
 - Before starting any skill packaging/update work in shared repos (especially `mvp-copilot-plugins`), always sync against latest upstream first (fetch + rebase/pull), verify branch is current, then make changes. Never build a PR from stale repo state.
+- **Standing instruction — installing/updating plugins from `microsoft/mvp-copilot-plugins` (private repo):** `copilot plugin marketplace add microsoft/mvp-copilot-plugins` fails (`fatal: unable to get password from user`) because Copilot's internal clone doesn't inherit the git credential-manager config, even though `gh auth setup-git` is set up. Workaround, and the standing procedure to use automatically whenever this marketplace needs adding or refreshing (e.g., after Golnaz or anyone shares a new plugin link from this repo): (1) `gh repo clone microsoft/mvp-copilot-plugins <temp-path>` (or `git -C <temp-path> pull` if already cloned) to get/refresh a local copy using `gh`'s working auth, (2) `copilot plugin marketplace add <temp-path>` (local path, not `OWNER/REPO`) to register/refresh it, (3) `copilot plugin install <plugin-name>@mvp-copilot-plugins` to install/update the specific plugin. Do this proactively without being asked again whenever a new mvp-copilot-plugins link/plugin comes up or an already-installed one needs updating.
+- **Standing instruction — keep skills reference table current:** every time a `mvp-copilot-plugins` freshness/sync check runs (see repo freshness rule below), also refresh the "What to say → which skill fires" table in `context/references.md` to match whatever's actually installed at that moment (added/removed/renamed skills, new plugins like `github-workflow`). Don't wait to be asked.
+- **Standing instruction — repo freshness auto-check (Sara is not a coder, don't rely on her to know/ask for this):** Any time work touches a local clone of a shared repo Sara doesn't own outright (especially `mvp-copilot-plugins`, and her personal fork of it at `C:\Users\sfinkelstein\mvp-copilot-plugins`), proactively check freshness *before* starting work, without being asked: confirm `origin` vs `upstream` remotes exist and diff, `git fetch` both, and if her fork/local branch is behind real upstream, sync it (push `upstream/main` → fork `main`, rebase her working branch) before any packaging/PR/demo work. Surface only genuine content conflicts for her decision — never resolve shared-file conflicts unilaterally. Explain any git concept in plain language each time (she doesn't know git terminology) rather than assuming familiarity. This directly caused a "wrong repo version" incident with her manager Golnaz on 7/15 — treat prevention of repeat incidents as a priority.
 
 ## Skills and Experience
 - **Strong at:** Working with people, creative direction, making good films
