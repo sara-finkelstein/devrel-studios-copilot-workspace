@@ -4,14 +4,6 @@
 
 ## Active
 
-### Transcript proofreading + ADO caption delivery enhancement
-- **Status:** draft PR ready for team review (7/22)
-- **What:** Extended the existing shared `transcript-proofread` skill (rather than creating an overlapping skill) to generate synchronized SRT/VTT/TTML files and optionally attach them to a confirmed ADO Episode.
-- **Validated with:** FEI episode 228786 (dbt + Fabric) — proofread all 298 cues, generated all three caption formats, and attached them to the Episode.
-- **Safety:** the skill confirms the exact ADO work item ID and project before attaching; the helper verifies the item exists and is an Episode, then skips filenames already attached.
-- **GitHub:** [Issue #221](https://github.com/microsoft/mvp-copilot-plugins/issues/221) · [Draft PR #222](https://github.com/microsoft/mvp-copilot-plugins/pull/222)
-- **Next:** Golnaz/team review, then mark PR #222 ready when approved.
-
 ### 📌 Teams-reaction → OneNote to-do capture (new automation)
 - **Status:** live (set up 7/21) — recurring scan running
 - **What:** Sara reacts 📌 to any Teams message with an action item. A scheduled Copilot prompt (weekdays 9am/12pm/3pm/6pm) scans for newly-pinned messages via Work IQ, classifies each into one of Sara's 6 OneNote themes, and appends a checkbox line to `context/pinned-teams-digest.md` for Sara to paste into her real OneNote herself.
@@ -113,6 +105,14 @@
 ## On Hold
 
 ## Recently Completed
+
+### Transcript proofreading + ADO caption delivery enhancement
+- **Status:** merged (7/23)
+- **What:** Extended the existing shared `transcript-proofread` skill (rather than creating an overlapping skill) to generate synchronized SRT/VTT/TTML files and optionally attach them to a confirmed ADO Episode.
+- **Validated with:** FEI episode 228786 (dbt + Fabric) — proofread all 298 cues, generated all three caption formats, and attached them to the Episode.
+- **Safety:** the skill confirms the exact ADO work item ID and project before attaching; the helper verifies the item exists and is an Episode, then skips filenames already attached.
+- **GitHub:** [Issue #221](https://github.com/microsoft/mvp-copilot-plugins/issues/221) · [Merged PR #222](https://github.com/microsoft/mvp-copilot-plugins/pull/222)
+- **Plugin delivery:** automatic maintenance is configured locally; `devrel-studios` will move from the old direct 0.1.0 install to team version 0.3.0 after all active Copilot CLI windows close.
 
 ### Transcript-proofread skill validation (PR #217)
 - **Status:** completed (7/10)
