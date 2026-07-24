@@ -28,6 +28,7 @@
 - I keep a lot of files in SharePoint too; Copilot can read SharePoint via Work IQ but can't save to it directly unless the folder is synced locally via OneDrive
 
 ## How I Prefer to Work
+- **Session startup:** load all six workspace context files (`me.md`, `studio.md`, `projects.md`, `learnings.md`, `references.md`, and `patterns.md`) at the start of every session so prior learnings and safeguards are not missed.
 - **Voice profile caution:** always show drafts using the Teams/chat voice profile before sending anything — don't auto-send. The profile is based on a small sample of messages, so don't let a few examples get over-magnified into "rules." Treat it as a loose guide, adjust per Sara's feedback each time, and confirm before locking in any tone she hasn't explicitly signed off on.
 - **Writing tone/voice:** default to informal, plain language, minimal jargon — that's how I actually talk. Reserve clear/halfway-formal "corporate" tone only for content going to executives or their assistants (e.g., exec-facing emails, invites to senior stakeholders). Don't default to formal corporate-speak for everyday drafts, Teams messages, or internal notes.
 - **YouTube titles:** optimize for search — front-load high-volume dev keywords (e.g., product/model names like "Claude Opus 4", "RAG", "embeddings") over brand names or narrative/story angles. Discovery beats cleverness.

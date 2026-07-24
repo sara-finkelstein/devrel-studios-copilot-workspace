@@ -15,7 +15,7 @@ Use the files in `context/` as the source of truth for this workspace:
 - **`context/references.md`** — links, docs, tools, and resources used regularly
 - **`context/patterns.md`** — repeated workflows, friction points, automation candidates, skill candidates
 
-At session start, read `context/me.md` and `context/projects.md` before responding to the first request — these provide the working style and current priorities needed for relevant answers.
+At session start, read all six context files listed above before responding to the first request. This ensures current priorities, learned safeguards, references, and recurring workflow patterns are available from the beginning.
 
 ### Context file formatting
 
