@@ -46,6 +46,7 @@
 - If I say to follow an existing series/style pattern, mirror it exactly (all sections, marker styles, order, and placement rules). Only originate a new style when no valid reference exists or I explicitly ask for a change.
 - For episode metadata runs with a clear Episode WI ID, write metadata directly to ADO first, then hand off with: "I'm done, please check everything before you publish to YouTube." Do not pause before write unless target/fields are ambiguous or I ask for dry run.
 - Prefer API/tool-native workflows over browser automation. Use Playwright only when absolutely necessary (e.g., browser-gated Frame.io/SharePoint steps with no stable API path).
+- Treat shared external planning and content-calendar tools as strictly read-only unless Sara explicitly approves a specific write; never delete, move, reorganize, or overwrite their content.
 - In stakeholder-facing summaries, avoid the abbreviation "WI" — use "Episode work item ID" instead.
 - In stakeholder-facing summaries, avoid naming specific browser automation tooling; describe the workflow in capability terms (API/tool-native first, browser fallback only when required).
 - Before starting any skill packaging/update work in shared repos (especially `mvp-copilot-plugins`), always sync against latest upstream first (fetch + rebase/pull), verify branch is current, then make changes. Never build a PR from stale repo state.

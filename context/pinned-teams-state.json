@@ -1,5 +1,10 @@
 {
-  "_comment": "Tracks Teams message IDs already staged into pinned-teams-digest.md, so the recurring scan never double-adds an item. Updated by Copilot on each scheduled run.",
-  "processed_message_ids": [],
-  "last_checked_utc": null
+  "_comment": "Tracks #todo self-chat message IDs handled by the recurring Teams-to-Microsoft-To-Do scanner.",
+  "processed_message_ids": [
+    "48:notes/1784933425968",
+    "48:notes/1784937356516"
+  ],
+  "pending_todo_message_ids": [],
+  "needs_confirmation_message_ids": [],
+  "last_checked_utc": "2026-07-25T00:00:06Z"
 }

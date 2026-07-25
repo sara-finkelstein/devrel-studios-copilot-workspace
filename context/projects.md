@@ -4,12 +4,13 @@
 
 ## Active
 
-### 📌 Teams-reaction → OneNote to-do capture (new automation)
-- **Status:** live (set up 7/21) — recurring scan running
-- **What:** Sara reacts 📌 to any Teams message with an action item. A scheduled Copilot prompt (weekdays 9am/12pm/3pm/6pm) scans for newly-pinned messages via Work IQ, classifies each into one of Sara's 6 OneNote themes, and appends a checkbox line to `context/pinned-teams-digest.md` for Sara to paste into her real OneNote herself.
-- **Why manual paste, not direct write:** Work IQ has no OneNote API access at all, and OneNote desktop COM automation is broken on this machine ("Library not registered" — likely Click-to-Run typelib issue). There's also a real prior incident where an automated write overwrote/overlapped Sara's OneNote content via sync conflict. See `context/learnings.md` and `patterns.md` (Friction Points).
-- **Files:** `context/pinned-teams-digest.md` (staging area, grouped by theme), `context/pinned-teams-state.json` (dedup tracking).
-- **Next:** revisit direct OneNote automation only if an Office repair/reinstall resolves the COM registration error.
+### Microsoft To Do transition + Teams note-to-self capture
+- **Status:** live (set up 7/24) — gradual migration from OneNote
+- **What:** Six separate Microsoft To Do lists now match Sara's high-level projects: Fabric Tech Talk Fridays & Executive Insights, Behind the Code, MCP Dev Days, MVP Unplugged, Studios, and Startup Shorts. Existing OneNote content remains untouched; selected tasks are migrated intentionally.
+- **Teams capture:** Sara sends herself a Teams message using `#todo Project | Task | due Date`. Scheduled scans run weekdays at 9am, 12pm, 3pm, and 5pm, classify the task, create it in the matching To Do list, and deduplicate by Teams message ID.
+- **Safety:** `context/pinned-teams-digest.md` is an append-only backup; `context/pinned-teams-state.json` tracks processed, pending, and needs-confirmation message IDs. Ambiguous project names or dates are held for confirmation instead of guessed.
+- **Important limitation:** Work IQ search does not expose Teams reaction metadata, so the original 📌 reaction trigger was retired. The current scheduled helper uses desktop To Do automation and therefore needs the computer awake and unlocked.
+- **Next:** switch the scheduled helper to Outlook COM task creation, which successfully created and updated To Do tasks, notes, and due dates without manipulating the To Do interface.
 
 ### Fabric Tech Talk Fridays & Fabric Executive Insights — status tracking
 - **Status:** assessed 7/20; iteration paths cleaned up
