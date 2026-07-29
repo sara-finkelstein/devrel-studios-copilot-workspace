@@ -99,7 +99,7 @@
 - **What:** Replaced the stale Excel-first local Series workflow with a proposal-first team skill. Normal path: approved Proposal → `Ready for project automation` → Power Automate creates Series/Event/Moment → producer completes detailed editable intake → Copilot creates Episodes → verifies generated production children. Direct top-level creation is restricted to explicit owner-led tests/recovery.
 - **Validated live 7/24:** Proposal moved to `Ingested` and gained the automation-created Series as parent; standard Episodes generated Scheduling/Editing/Uploading/Publishing; Thumbnails-enabled Episodes generated those four plus one Thumbnails child.
 - **Quality gate:** GitHub checks passed; 46 Python/Node tests passed; `github-pr-review` found and drove fixes for Event routing/input/option propagation, then returned **Approve**.
-- **Next:** Sara has a To Do reminder to review draft PR #224 before requesting Golnaz/team review.
+- **Next:** Sara has a To Do reminder to review draft PR #224 before requesting Golnaz/team review. Also test the manual fallback on a suitable Episode: inspect existing children, create only missing Scheduling/Editing/Uploading/Publishing/optional Thumbnails items, link them correctly, and verify no duplicates.
 
 ### YouTube API Setup
 - **Status:** complete
