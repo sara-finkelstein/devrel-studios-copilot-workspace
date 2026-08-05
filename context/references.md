@@ -17,6 +17,20 @@
 - ADO MCP server (`ado`) from the plugin's `.mcp.json` is already configured in `~/.copilot/mcp-config.json`
 - To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
 
+### Sara's Skill Publication Tracker
+
+Keep this table current when a skill is submitted, merged, superseded, or retired.
+
+| Skill | What it does | Current status |
+|---|---|---|
+| `complete-project-ingestion` | Takes an approved ADO Proposal through project automation, detailed production intake, Episode creation, and verification of generated child tasks. | [Draft PR #224](https://github.com/microsoft/mvp-copilot-plugins/pull/224) — open, not merged |
+| `create-episode-metadata-from-transcripts` | Generates a complete YouTube metadata package from a transcript, matches the series' established style, and writes the external metadata fields to the ADO Episode. | [PR #218](https://github.com/microsoft/mvp-copilot-plugins/pull/218) — open, not merged |
+| `mvp-unplugged-links` | Extracts episode resource and speaker-social links from the shared MVP Unplugged PowerPoint deck and writes them to the ADO Episode. | Included in [PR #218](https://github.com/microsoft/mvp-copilot-plugins/pull/218) — open, not merged |
+| `fabric-production-schedule` | Manages FTTF and Fabric Executive Insights timelines and creates addressed Outlook drafts for V1 edit reviews and V2 feedback reminders. V1 drafts are ready for Sara to send; scheduled V2 reminders may also notify her in Teams. | Personal/local — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/fabric-production-schedule/SKILL.md) |
+| `content-autopsy` | Pulls retention, traffic sources, subscriber conversion, and core YouTube metrics for one video, with optional thumbnail impressions and CTR from a Studio CSV. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/content-autopsy/SKILL.md) |
+| `video-chapters` | Transcribes a local video, identifies topic changes, generates timestamped YouTube chapters, and can save them to the ADO Episode. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/video-chapters/SKILL.md) |
+| `ado-add-note` | Finds the correct Studios ADO work item from an ID or description and posts a signed discussion note after resolving any ambiguity. | Workspace-only and intentionally personal — [open skill](file:///C:/Users/sfinkelstein/devrel-studios-copilot-workspace/skills/ado-add-note.md) |
+
 ### What to say → which skill fires (kept current during repo sync checks)
 Skills trigger automatically from natural language — no need to name them. Table below is refreshed each time a `mvp-copilot-plugins` sync/freshness check runs, so it always reflects what's actually installed.
 
@@ -31,6 +45,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Update YouTube description" / "sync ADO to YouTube" | youtube-description | The ADO Episode work item ID (fields must already be filled in there) |
 | "Add a YouTube collaborator" | youtube-collaborator | The ADO work item ID or YouTube video URL + the collaborator's channel name |
 | "Generate chapter markers" | video-chapters | The video file itself (I transcribe it locally) |
+| "Draft the Fabric review email" | fabric-production-schedule | The Episode work item ID + Frame.io review link; dates come from ADO, and the skill creates an addressed Outlook draft with clickable ADO and Frame.io links, ready for Sara to send |
 | "Analyze YouTube/livestream comments" | youtube-analysis | The video, livestream, or playlist URL |
 | "Content autopsy" / "why did this video do well" | content-autopsy | The YouTube video URL (channel token must exist); a Studio CSV export is optional for CTR data |
 | "View to TAM" / "how did this video perform" | view-to-tam | The YouTube video URL |
