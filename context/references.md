@@ -13,6 +13,7 @@
 - Skills installed in `~/.copilot/skills/`: aka-redirect, create-event-episodes, create-studio-support, send-calendar-invite, video-staging, view-to-tam, vtt-metadata, youtube-analysis, youtube-collaborator, youtube-description, youtube-monthly-watchhours
 - Shared scripts (plugin root): `~/.copilot/plugins/devrel-studios/scripts/` — parse-vtt.py, download-comments.py, download-playlist.py
 - The `<PLUGIN_ROOT>` placeholder in vtt-metadata & youtube-analysis SKILL.md was patched to that absolute path
+- Local `create-event-episodes` is extended to support Shows as well as Events. For FTTF FY27 it inherits the Show template and uses Matt Scholz as Technical Director; reapply this local extension after plugin refreshes until it is upstream.
 - Requires `yt-dlp` (installed) — youtube-analysis scripts call `python -m yt_dlp`
 - ADO MCP server (`ado`) from the plugin's `.mcp.json` is already configured in `~/.copilot/mcp-config.json`
 - To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
