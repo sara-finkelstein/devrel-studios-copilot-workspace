@@ -65,6 +65,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 - Channels authorized: azd, dotnet, msdev, reactor, vs
 
 ## Microsoft Internal
+- [FY27 Production Studios Services Rate Card](https://microsoft.sharepoint.com/teams/CurrentRateCard/Shared%20Documents/Information/Services%20and%20Cost%20Rate%20Card/FY27_ProductionStudios_Services_RateCard.pdf?web=1) — current BOC pricing; streaming support is $300/hour with a 2-hour minimum
 - General 222155 — Copilot onboarding work item
 - Microsoft Foundry — sister team, Azure AI Foundry focus
 

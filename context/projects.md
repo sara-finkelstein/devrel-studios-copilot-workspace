@@ -4,6 +4,13 @@
 
 ## Active
 
+### MCP Live! — BOC livestreaming costs
+- **Status:** pricing confirmed 8/11; team notification still needed
+- **Current FY27 BOC rate:** Streaming Support is **$300/hour with a 2-hour minimum** ($600 minimum). AI captions add $30/hour; human live captions add $170/hour.
+- **Communication check:** no email or Teams message was found where Pamela Fox or Liam Hampton were explicitly told about the new BOC livestreaming fee. The Aug. 10 MCP Live! check-in covered StreamYard and livestream setup, but not pricing.
+- **Related history:** Pamela mentioned "$7,500 for half day for Studios" on May 27; that appears to be a studio-booking cost, not the newer BOC livestream support charge.
+- **Source:** [FY27 Production Studios Services Rate Card](https://microsoft.sharepoint.com/teams/CurrentRateCard/Shared%20Documents/Information/Services%20and%20Cost%20Rate%20Card/FY27_ProductionStudios_Services_RateCard.pdf?web=1)
+
 ### Microsoft To Do transition + Teams note-to-self capture
 - **Status:** live (set up 7/24) — gradual migration from OneNote
 - **What:** Six separate Microsoft To Do lists now match Sara's high-level projects: Fabric Tech Talk Fridays & Executive Insights, Behind the Code, MCP Dev Days, MVP Unplugged, Studios, and Startup Shorts. Existing OneNote content remains untouched; selected tasks are migrated intentionally.
