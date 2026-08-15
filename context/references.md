@@ -46,7 +46,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Update YouTube description" / "sync ADO to YouTube" | youtube-description | The ADO Episode work item ID (fields must already be filled in there) |
 | "Add a YouTube collaborator" | youtube-collaborator | The ADO work item ID or YouTube video URL + the collaborator's channel name |
 | "Generate chapter markers" | video-chapters | The video file itself (I transcribe it locally) |
-| "Draft the Fabric review email" | fabric-production-schedule | The Episode work item ID + Frame.io review link; dates come from ADO, and the skill creates an addressed Outlook draft with clickable ADO and Frame.io links, ready for Sara to send |
+| "Draft the Fabric review email" | fabric-production-schedule | The Episode work item ID + Frame.io review link; dates come from ADO, the skill creates an addressed Outlook draft with clickable ADO and Frame.io links, then notifies Sara privately in Teams to check Drafts |
 | "Tell me when a Fabric episode is ready to publish" | fabric-production-schedule | No per-Episode input; the scheduled watcher monitors FY27 FEI Show 236171 and FTTF Show 236193 |
 | "Analyze YouTube/livestream comments" | youtube-analysis | The video, livestream, or playlist URL |
 | "Content autopsy" / "why did this video do well" | content-autopsy | The YouTube video URL (channel token must exist); a Studio CSV export is optional for CTR data |

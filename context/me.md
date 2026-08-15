@@ -41,6 +41,10 @@
 - I don't write code, so explain technical concepts in plain language and handle the implementation yourself
 - Don't make me do busywork that can be automated — especially in ADO
 - Proactively alert me once daily about publishing dates that are 2 days away or less across my projects
+- For backlog and project-status reviews, include only the current fiscal year unless I explicitly ask for historical or legacy work.
+- Format backlog reviews as a concise priority table with traffic-light indicators, clickable work-item links, and the specific issue or next milestone.
+- In backlog reviews, treat the `waiting for final approval` ADO tag as the authoritative signal for stakeholder sign-off; also read recent comments for context, and do not flag tagged Episodes as actionable overdue work.
+- Prefer durable, visible workflow signals such as tags, ownership, and concise status views that reduce repeated rechecking when team priorities or participants change.
 - Prefer handling my ADO updates (comments, states, fields) through the Copilot CLI rather than sending me to the ADO web UI — it's faster and saves me from keeping tabs open. Confirm before writing when the target item is ambiguous or the change is hard to undo.
 - When writing comments/notes to my ADO work items, always sign the note with a final line: `Written by ADO MCP server via CLI`
 - If I say to follow an existing series/style pattern, mirror it exactly (all sections, marker styles, order, and placement rules). Only originate a new style when no valid reference exists or I explicitly ask for a change.
