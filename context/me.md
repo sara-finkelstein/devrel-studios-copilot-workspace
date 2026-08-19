@@ -47,6 +47,7 @@
 - Prefer durable, visible workflow signals such as tags, ownership, and concise status views that reduce repeated rechecking when team priorities or participants change.
 - Prefer handling my ADO updates (comments, states, fields) through the Copilot CLI rather than sending me to the ADO web UI — it's faster and saves me from keeping tabs open. Confirm before writing when the target item is ambiguous or the change is hard to undo.
 - When writing comments/notes to my ADO work items, always sign the note with a final line: `Written by ADO MCP server via CLI`
+- When ADO dates change, preserve earlier history and add an `As of [Month D, YYYY]` section at the top of the Description plus an append-only discussion comment. Use short bullet points for current dates and a brief supersession note; never delete old information.
 - If I say to follow an existing series/style pattern, mirror it exactly (all sections, marker styles, order, and placement rules). Only originate a new style when no valid reference exists or I explicitly ask for a change.
 - For episode metadata runs with a clear Episode WI ID, write metadata directly to ADO first, then hand off with: "I'm done, please check everything before you publish to YouTube." Do not pause before write unless target/fields are ambiguous or I ask for dry run.
 - Prefer API/tool-native workflows over browser automation. Use Playwright only when absolutely necessary (e.g., browser-gated Frame.io/SharePoint steps with no stable API path).
