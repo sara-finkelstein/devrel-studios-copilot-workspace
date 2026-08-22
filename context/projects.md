@@ -4,8 +4,11 @@
 
 ## Active
 
-### MCP Live! — BOC livestreaming costs
-- **Status:** pricing confirmed 8/11; team notification still needed
+### MCP Live! — production and social promotion
+- **Social-promotion history captured 8/21:** [General 239709 — Social media promos](https://dev.azure.com/devrel/Studios/_workitems/edit/239709) now contains the complete 12:26 PM Cynthia Zanoni email plus one chronological source-of-truth timeline covering the Christian Booth and Doug/Cynthia Teams discussions. The record preserves source links and Outlook/Teams message IDs for deduplication.
+- **Social decisions:** YouTube remains the primary livestream/view-count destination; promotion should use tracked Reactor/aka.ms registration links; the blue CTA pill can sit where Carlotta points; Doug will create YouTube Shorts and TikTok versions once the correct tracking codes are supplied.
+- **Social follow-up:** obtain final YouTube Shorts and TikTok aka.ms codes, decide whether Bluesky needs a separate version/link, and compare burned-in CTA performance with Instagram's “link in bio” approach.
+- **BOC status:** pricing confirmed 8/11; team notification still needed
 - **Current FY27 BOC rate:** Streaming Support is **$300/hour with a 2-hour minimum** ($600 minimum). AI captions add $30/hour; human live captions add $170/hour.
 - **Communication check:** no email or Teams message was found where Pamela Fox or Liam Hampton were explicitly told about the new BOC livestreaming fee. The Aug. 10 MCP Live! check-in covered StreamYard and livestream setup, but not pricing.
 - **Related history:** Pamela mentioned "$7,500 for half day for Studios" on May 27; that appears to be a studio-booking cost, not the newer BOC livestream support charge.
