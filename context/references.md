@@ -27,10 +27,11 @@ Keep this table current when a skill is submitted, merged, superseded, or retire
 | `complete-project-ingestion` | Takes an approved ADO Proposal through project automation, detailed production intake, Episode creation, and verification of generated child tasks. | [Draft PR #224](https://github.com/microsoft/mvp-copilot-plugins/pull/224) — open, not merged |
 | `create-episode-metadata-from-transcripts` | Generates a complete YouTube metadata package from a transcript, matches the series' established style, and writes the external metadata fields to the ADO Episode. | [PR #218](https://github.com/microsoft/mvp-copilot-plugins/pull/218) — open, not merged |
 | `mvp-unplugged-links` | Extracts episode resource and speaker-social links from the shared MVP Unplugged PowerPoint deck and writes them to the ADO Episode. | Included in [PR #218](https://github.com/microsoft/mvp-copilot-plugins/pull/218) — open, not merged |
-| `production-schedule` / `fabric-production-schedule` | Builds reusable production-schedule presets for the team; Sara's personal Fabric preset manages FTTF/FEI timelines, Graph-synchronized Outlook entries, review drafts, V2 reminders, publishing alerts, and an exception-only control tower. | Team version: [Draft PR #230](https://github.com/microsoft/mvp-copilot-plugins/pull/230) — updated 8/21 with a durable external-scheduler contract, health checks, catch-up, overlap protection, bounded retries, and logs. Personal preset: [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/fabric-production-schedule/SKILL.md) |
+| `production-schedule` / `fabric-production-schedule` | Builds reusable production-schedule presets for the team; Sara's personal Fabric preset manages FTTF/FEI timelines, Graph-synchronized Outlook entries, review drafts, V2 reminders, publishing alerts, and an exception-only control tower. | Team version: [PR #230](https://github.com/microsoft/mvp-copilot-plugins/pull/230) — ready for Golnaz's re-review as of 8/25; all review threads are resolved and required checks pass. Personal preset: [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/fabric-production-schedule/SKILL.md) |
 | `content-autopsy` | Pulls retention, traffic sources, subscriber conversion, and core YouTube metrics for one video, with optional thumbnail impressions and CTR from a Studio CSV. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/content-autopsy/SKILL.md) |
 | `video-chapters` | Transcribes a local video, identifies topic changes, generates timestamped YouTube chapters, and can save them to the ADO Episode. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/video-chapters/SKILL.md) |
 | `ado-add-note` | Finds the correct Studios ADO work item from an ID or description and posts a signed discussion note after resolving any ambiguity. | Workspace-only and intentionally personal — [open skill](file:///C:/Users/sfinkelstein/devrel-studios-copilot-workspace/skills/ado-add-note.md) |
+| `communication-history-to-ado` | Copies exact Teams or Outlook communication into an ADO Discussion with live recency verification, source links, stable IDs, deduplication, and correction handling. | Personal local skill — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/communication-history-to-ado/SKILL.md) |
 
 ### What to say → which skill fires (kept current during repo sync checks)
 Skills trigger automatically from natural language — no need to name them. Table below is refreshed each time a `mvp-copilot-plugins` sync/freshness check runs, so it always reflects what's actually installed.
@@ -55,6 +56,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Send calendar invite for a recording" | send-calendar-invite | The Episode work item ID |
 | "Proofread this transcript" | transcript-proofread | A `.vtt`/`.srt` transcript file |
 | "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
+| "Add my latest Teams message/email to ADO" | communication-history-to-ado | The ADO work item ID or description + the person, chat, email subject, or topic |
 
 
 ## YouTube API
