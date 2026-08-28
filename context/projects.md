@@ -4,6 +4,12 @@
 
 ## Active
 
+### MCP Dev Days — post-event on-demand episodes
+- **Post Event hierarchy completed 8/27:** [Post Event 231954](https://dev.azure.com/devrel/Studios/_workitems/edit/231954) now directly contains eight New on-demand Episodes, [242418](https://dev.azure.com/devrel/Studios/_workitems/edit/242418) through [242425](https://dev.azure.com/devrel/Studios/_workitems/edit/242425), using Live Show Session IDs `[100]`–`[107]`.
+- **Assignments and deadlines:** all eight Episodes and their Editing children are assigned to Chris Armstrong (RUN Studios LLC) and due September 15, 2026 at 9:00 AM Pacific. Speaker names are populated from the run-of-show workbook.
+- **Hierarchy cleanup:** removed all generated Scheduling items and the obsolete `Edit on demand sessions (episodes pending)` branch. Each Episode retains only its Editing, Uploading, and Publishing children.
+- **Source:** [MCP Dev Days September 9 run of show](https://microsoft.sharepoint.com/:x:/t/MicrosoftDeveloperStudiosChannel9/cQpWBMeu7uRnRJLzDYnLdhe2EgUCF3aerOLNuqf_ztn0xTLgFw). Remaining Episode fields will be populated from the workbook later.
+
 ### MCP Live! — production and social promotion
 - **Social-promotion history captured 8/21:** [General 239709 — Social media promos](https://dev.azure.com/devrel/Studios/_workitems/edit/239709) now contains the complete 12:26 PM Cynthia Zanoni email plus one chronological source-of-truth timeline covering the Christian Booth and Doug/Cynthia Teams discussions. The record preserves source links and Outlook/Teams message IDs for deduplication.
 - **Social decisions:** YouTube remains the primary livestream/view-count destination; promotion should use tracked Reactor/aka.ms registration links; the blue CTA pill can sit where Carlotta points; Doug will create YouTube Shorts and TikTok versions once the correct tracking codes are supplied.
