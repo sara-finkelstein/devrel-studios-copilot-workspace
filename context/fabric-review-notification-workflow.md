@@ -79,11 +79,23 @@
 
 ## Publishing-Ready Alerts
 
-- Copilot watches for a Fabric Publishing child moving from **New** to
-  **In Progress**.
-- Each qualifying transition produces one Teams notification containing the
-  Episode details and clickable ADO link.
-- Duplicate notifications are prevented.
+- Copilot treats the parent Episode moving to **Publication** as the editor's
+  signal that the final video is approved.
+- Delivery-ready requires the final file, thumbnail, external title and
+  description, resource links, chapters, caption link, publication date, and
+  attached VTT, SRT, and TTML files.
+- Speaker social links are reported when blank but do not block delivery.
+- If an approved Episode is incomplete, Sara receives one private alert listing
+  the exact gaps and another only when that list changes.
+- When the approved package becomes complete, Sara receives one private
+  delivery-ready alert with the clickable ADO Episode link.
+- The stakeholder handoff is prepared separately for Sara to review and approve;
+  it is never posted automatically.
+- After Sara approves and Copilot posts the handoff in the shared Fabric Teams
+  chat, Copilot automatically copies the exact message, recipients, timestamp,
+  source link, and stable Teams message ID into the Episode's ADO Discussion.
+- The ADO copy is deduplicated and verified; Sara does not need to request it
+  separately.
 
 ## Outlook Calendar Callouts
 
