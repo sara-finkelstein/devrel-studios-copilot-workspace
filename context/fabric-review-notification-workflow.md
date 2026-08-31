@@ -84,6 +84,13 @@
 - Delivery-ready requires the final file, thumbnail, external title and
   description, resource links, chapters, caption link, publication date, and
   attached VTT, SRT, and TTML files.
+- For YouTube Shorts, follow the Episode's `Thumbnails` setting; a thumbnail
+  does not block delivery when that setting is false. Shorts normally link to
+  a related main episode, or to the parent series/playlist when the Short
+  references the series generally.
+- A production-final handoff can ask the Fabric team to complete the YouTube
+  title, description, and destination link, but it is not the same as the
+  fully complete publishing-ready alert.
 - Speaker social links are reported when blank but do not block delivery.
 - If an approved Episode is incomplete, Sara receives one private alert listing
   the exact gaps and another only when that list changes.
