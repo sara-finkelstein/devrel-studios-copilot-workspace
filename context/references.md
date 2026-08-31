@@ -54,7 +54,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "View to TAM" / "how did this video perform" | view-to-tam | The YouTube video URL |
 | "Create an aka.ms redirect" | aka-redirect | Target URL, desired short path name, your alias |
 | "Send calendar invite for a recording" | send-calendar-invite | The Episode work item ID |
-| "Proofread this transcript" | transcript-proofread | A `.vtt`/`.srt` transcript file |
+| "Proofread this transcript" / "create the other subtitle versions" | transcript-proofread | A `.vtt`/`.srt` file; include an Episode ID or identifiable title and all SRT/VTT/TTML files are attached to ADO automatically |
 | "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
 | "Add my latest Teams message/email to ADO" | communication-history-to-ado | The ADO work item ID or description + the person, chat, email subject, or topic |
 

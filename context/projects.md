@@ -141,7 +141,7 @@
 
 ### Transcript proofreading + ADO caption delivery enhancement
 - **Status:** merged (7/23)
-- **What:** Extended the existing shared `transcript-proofread` skill (rather than creating an overlapping skill) to generate synchronized SRT/VTT/TTML files and optionally attach them to a confirmed ADO Episode.
+- **What:** Extended the existing shared `transcript-proofread` skill (rather than creating an overlapping skill) to generate synchronized SRT/VTT/TTML files and automatically attach all three when Sara provides a confirmed or uniquely identifiable ADO Episode.
 - **Validated with:** FEI episode 228786 (dbt + Fabric) — proofread all 298 cues, generated all three caption formats, and attached them to the Episode.
 - **Safety:** the skill confirms the exact ADO work item ID and project before attaching; the helper verifies the item exists and is an Episode, then skips filenames already attached.
 - **GitHub:** [Issue #221](https://github.com/microsoft/mvp-copilot-plugins/issues/221) · [Merged PR #222](https://github.com/microsoft/mvp-copilot-plugins/pull/222)
