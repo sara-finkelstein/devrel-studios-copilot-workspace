@@ -32,6 +32,7 @@ Keep this table current when a skill is submitted, merged, superseded, or retire
 | `video-chapters` | Transcribes a local video, identifies topic changes, generates timestamped YouTube chapters, and can save them to the ADO Episode. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/video-chapters/SKILL.md) |
 | `ado-add-note` | Finds the correct Studios ADO work item from an ID or description and posts a signed discussion note after resolving any ambiguity. | Workspace-only and intentionally personal — [open skill](file:///C:/Users/sfinkelstein/devrel-studios-copilot-workspace/skills/ado-add-note.md) |
 | `communication-history-to-ado` | Copies exact Teams or Outlook communication into an ADO Discussion with live recency verification, source links, stable IDs, deduplication, and correction handling. | Personal local skill — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/communication-history-to-ado/SKILL.md) |
+| `frameio-caption-review` | Uploads a proofed caption track to a Fabric Episode's final Frame.io video, verifies the selectable CC track, prepares a reviewer Share, and records the approved result in ADO. | Personal local skill — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/frameio-caption-review/SKILL.md) |
 
 ### What to say → which skill fires (kept current during repo sync checks)
 Skills trigger automatically from natural language — no need to name them. Table below is refreshed each time a `mvp-copilot-plugins` sync/freshness check runs, so it always reflects what's actually installed.
@@ -55,6 +56,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Create an aka.ms redirect" | aka-redirect | Target URL, desired short path name, your alias |
 | "Send calendar invite for a recording" | send-calendar-invite | The Episode work item ID |
 | "Proofread this transcript" / "create the other subtitle versions" | transcript-proofread | A `.vtt`/`.srt` file; include an Episode ID or identifiable title and all SRT/VTT/TTML files are attached to ADO automatically |
+| "Upload these captions to Frame.io" / "share captions with a reviewer" | frameio-caption-review | The ADO Episode work item ID + reviewer name/email; it finds the final Frame.io video and caption package |
 | "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
 | "Add my latest Teams message/email to ADO" | communication-history-to-ado | The ADO work item ID or description + the person, chat, email subject, or topic |
 
