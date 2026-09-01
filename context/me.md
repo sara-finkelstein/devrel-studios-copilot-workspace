@@ -9,7 +9,7 @@
 - Direct studio shoots and manage production workflows
 - Supervise video edits and post-production
 - Help show owners film and manage their work
-- For Fabric tracking, Sara owns scheduling, recording coordination, approval awareness and follow-up, caption proofing/ADO attachment, and delivery of the final package for publishing. The Fabric publishing team owns the actual publication deadline; missed publication is a follow-up for Sara, not her deliverable.
+- For Fabric tracking, Sara owns scheduling, recording coordination, approval awareness and follow-up, caption proofing/ADO attachment, and delivery of the final package for publishing. The Fabric publishing team owns the actual publication deadline; after delivery, missed publication is `Waiting — Fabric publishing` with no action for Sara.
 - Track projects and deliverables in ADO — **all my ADO work lives in the `Studios` project (org: `devrel`, i.e. dev.azure.com/devrel)**. Default here for any work item lookups.
 - YouTube channel management (msdev, azd, vs)
 
