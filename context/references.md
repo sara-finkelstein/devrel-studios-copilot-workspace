@@ -77,6 +77,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 - **Org:** DevRel · **Project:** Studios
 - **Project ID:** d583c19b-5f23-4bed-a650-1cc43436e5c9
 - **URL:** https://dev.azure.com/devrel/Studios
+- **FY27 Fabric Production Tracker:** [Open the current workbook](https://microsoft-my.sharepoint.com/personal/sfinkelstein_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B86F378C0-619E-464E-97DA-9B300F436624%7D&file=Fabric%20Production%20Tracker.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1) — global FEI/FTTF milestone view; ADO remains the source of truth.
 - Series/episode automation: see `skills/ado-series-creation.md`
 
 ## Copilot CLI

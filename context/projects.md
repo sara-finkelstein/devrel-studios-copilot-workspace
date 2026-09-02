@@ -32,6 +32,7 @@
 - **Next:** switch the scheduled helper to Outlook COM task creation, which successfully created and updated To Do tasks, notes, and due dates without manipulating the To Do interface.
 
 ### Fabric Tech Talk Fridays & Fabric Executive Insights — status tracking
+- **Fabric Production Tracker live 9/1:** the shared [FY27 Fabric Production Tracker](https://microsoft-my.sharepoint.com/personal/sfinkelstein_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B86F378C0-619E-464E-97DA-9B300F436624%7D&file=Fabric%20Production%20Tracker.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1) provides one milestone-based view across FEI and FTTF while ADO remains authoritative. The current link is saved in both FY27 parent Show descriptions. Episode 237660 records its 8/31 final handoff; Episode 233550 records its 9/1 review share and is waiting for Yitzhak's approval.
 - **Status:** assessed 7/20; iteration paths cleaned up
 - **What:** Reviewed both ADO Shows (#174864 FTTF, #224267 FEI) for outstanding work.
 - **Done 8/25 — PR #230 ready for re-review:** addressed Golnaz's three follow-up correctness requests by making holiday retrieval direction-aware for backward workbacks, validating every fully merged preset variant, and rejecting unusable timed-calendar configurations. Added regression coverage, pushed commit `d4a09eb`, resolved all review threads, marked the PR ready, and requested Golnaz's re-review; required checks pass.
