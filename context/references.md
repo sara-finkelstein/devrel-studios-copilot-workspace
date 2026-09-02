@@ -3,6 +3,8 @@
 ## References
 
 ## Team Resources
+- [Upload Metadata Template — COPY THIS ONE](https://microsoft.sharepoint.com/teams/MicrosoftDeveloperStudiosChannel9/_layouts/15/Doc.aspx?sourcedoc=%7BCD6803EC-889D-40CC-AC9F-8D0ECE43714B%7D&file=Upload_Metadata_Template_COPY-THIS-ONE.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1) — authoritative team workbook for show-owner episode metadata and uploader/publishing fields; use this instead of Sara's August 2025 test copies.
+- [Excel to ADO workflow](https://microsoft-my.sharepoint.com/personal/sfinkelstein_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BE42D7BF7-97A7-40DD-82B7-1878FDFBFE49%7D&file=Excel%20to%20ADO.docx&action=default&mobileredirect=true&DefaultItemOpen=1) — process document edited by Golnaz describing Excel as the metadata source and transfer into ADO; newer team work increasingly automates the ingestion.
 - [Copilot Workspace Template](https://github.com/camerontomisser2/devrel-studios-copilot-workspace) — Cameron's original template
 - [My Workspace Fork](https://github.com/sara-finkelstein/devrel-studios-copilot-workspace) — personal fork
 - [mvp-copilot-plugins](https://github.com/microsoft/mvp-copilot-plugins) — shared skills repo (youtube-description skill, PR #78)
