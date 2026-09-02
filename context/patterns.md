@@ -8,6 +8,7 @@
 ## Friction Points
 <!-- Things that take multiple attempts, require manual steps, or slow you down -->
 
+- **Final-approval delivery can be premature when burned-in captions are still outstanding** — for Fabric videos that require a burned-in-caption version, do not create the final-approval email merely because a proofed selectable caption track and final edit exist. Confirm the burned-in deliverable first, then draft the approval handoff.
 - **Fabric tracker lacks persistent human overrides** — ADO-derived milestone dates and status formulas cannot capture facts only Sara knows, and direct edits can be overwritten by a refresh. Add durable manual status, action-owner, and next-move override fields that take priority over calculated values without altering the underlying ADO facts.
 - **Dedicated Teams meeting chat for bold Copilot notifications** — confirmed 8/14: post to `19:meeting_MjBlM2NjOWItZjA0My00NjM1LWJmYzktNzdjMGY3OTM5MDEy@thread.v2`, then call `markChatUnreadForUser` so it becomes bold. It is a meeting chat, not Sara's self-chat. Use self-email only if the post or mark-unread action fails.
 - **Fabric drafts require a deliberate proof-and-send handoff** — schedules sometimes slip, so stakeholder emails must remain unsent Outlook drafts. Teams notifications should include the exact Episode number/title, clickable ADO link, and direct draft link so Sara can verify and send quickly.
