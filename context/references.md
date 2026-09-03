@@ -26,6 +26,7 @@ Keep this table current when a skill is submitted, merged, superseded, or retire
 
 | Skill | What it does | Current status |
 |---|---|---|
+| `transcript-proofread` | Proofreads caption files, produces synchronized SRT/VTT/TTML delivery packages, and now adds deterministic 34-character/two-line caption conformance for Frame.io review and editor burn-in. | [Draft PR #247](https://github.com/microsoft/mvp-copilot-plugins/pull/247) — open, not merged |
 | `complete-project-ingestion` | Takes an approved ADO Proposal through project automation, detailed production intake, Episode creation, and verification of generated child tasks. | [Draft PR #224](https://github.com/microsoft/mvp-copilot-plugins/pull/224) — open, not merged |
 | `create-episode-metadata-from-transcripts` | Generates a complete YouTube metadata package from a transcript, matches the series' established style, and writes the external metadata fields to the ADO Episode. | [PR #218](https://github.com/microsoft/mvp-copilot-plugins/pull/218) — open, not merged |
 | `mvp-unplugged-links` | Extracts episode resource and speaker-social links from the shared MVP Unplugged PowerPoint deck and writes them to the ADO Episode. | Included in [PR #218](https://github.com/microsoft/mvp-copilot-plugins/pull/218) — open, not merged |
@@ -57,7 +58,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "View to TAM" / "how did this video perform" | view-to-tam | The YouTube video URL |
 | "Create an aka.ms redirect" | aka-redirect | Target URL, desired short path name, your alias |
 | "Send calendar invite for a recording" | send-calendar-invite | The Episode work item ID |
-| "Proofread this transcript" / "create the other subtitle versions" | transcript-proofread | A `.vtt`/`.srt` file; include an Episode ID or identifiable title and all SRT/VTT/TTML files are attached to ADO automatically |
+| "Proofread this transcript" / "create the other subtitle versions" | transcript-proofread | A `.vtt`/`.srt` file; the proposed update conforms captions to 34 characters per line and two lines per cue, and an Episode ID/title triggers SRT/VTT/TTML attachment to ADO |
 | "Upload these captions to Frame.io" / "share captions with a reviewer" | frameio-caption-review | The ADO Episode work item ID + reviewer name/email; it finds the final Frame.io video and caption package |
 | "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
 | "Add my latest Teams message/email to ADO" | communication-history-to-ado | The ADO work item ID or description + the person, chat, email subject, or topic |
