@@ -17,6 +17,7 @@
 - Shared scripts (plugin root): `~/.copilot/plugins/devrel-studios/scripts/` — parse-vtt.py, download-comments.py, download-playlist.py
 - The `<PLUGIN_ROOT>` placeholder in vtt-metadata & youtube-analysis SKILL.md was patched to that absolute path
 - Local `create-event-episodes` is extended to support Shows as well as Events. For FTTF FY27 it inherits the Show template and uses Matt Scholz as Technical Director; reapply this local extension after plugin refreshes until it is upstream.
+- Personal `fabric-production-schedule` weekly reconciliation reports use separate Episode blocks with explicit line breaks, not tables; the canonical layout is in its Weekly ADO and Content Calendar Reconciliation section and is used by the scheduled runner.
 - Requires `yt-dlp` (installed) — youtube-analysis scripts call `python -m yt_dlp`
 - ADO MCP server (`ado`) from the plugin's `.mcp.json` is already configured in `~/.copilot/mcp-config.json`
 - To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
@@ -35,8 +36,8 @@ Keep this table current when a skill is submitted, merged, superseded, or retire
 | `content-autopsy` | Pulls retention, traffic sources, subscriber conversion, and core YouTube metrics for one video, with optional thumbnail impressions and CTR from a Studio CSV. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/content-autopsy/SKILL.md) |
 | `video-chapters` | Transcribes a local video, identifies topic changes, generates timestamped YouTube chapters, and can save them to the ADO Episode. | Local only — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/video-chapters/SKILL.md) |
 | `ado-add-note` | Finds the correct Studios ADO work item from an ID or description and posts a signed discussion note after resolving any ambiguity. | Workspace-only and intentionally personal — [open skill](file:///C:/Users/sfinkelstein/devrel-studios-copilot-workspace/skills/ado-add-note.md) |
-| `communication-history-to-ado` | Copies exact Teams or Outlook communication into an ADO Discussion with live recency verification, deduplication, compact Subject/Date/To/From headers, and image rendering for complex tables. | Team version: [draft PR #246](https://github.com/microsoft/mvp-copilot-plugins/pull/246) — open and live-tested; personal version: [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/communication-history-to-ado/SKILL.md) |
-| `frameio-caption-review` | Uploads a proofed caption track to a Fabric Episode's final Frame.io video, verifies the selectable CC track, prepares a reviewer Share, and records the approved result in ADO. | Personal local skill — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/frameio-caption-review/SKILL.md) |
+| `communication-history-to-ado` | Copies exact Teams or Outlook communication into ADO Discussion with live verification, deduplication, links/images, and automatic Teams capture. Personal version follows the global Outlook Online-first rule: check available authorized online connections before requesting an email export; never substitute desktop Outlook/COM. | Team version: [draft PR #246](https://github.com/microsoft/mvp-copilot-plugins/pull/246) — open and live-tested; personal version: [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/communication-history-to-ado/SKILL.md) |
+| `frameio-caption-review` | Prepares a proofed caption package and exact SRT for Sara's manual Frame.io upload, then verifies the selectable CC track, prepares a reviewer Share, and records the approved result in ADO. Frame.io API upload is unavailable. | Personal local skill — [open skill](file:///C:/Users/sfinkelstein/.copilot/skills/frameio-caption-review/SKILL.md) |
 
 ### What to say → which skill fires (kept current during repo sync checks)
 Skills trigger automatically from natural language — no need to name them. Table below is refreshed each time a `mvp-copilot-plugins` sync/freshness check runs, so it always reflects what's actually installed.
@@ -60,7 +61,7 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Create an aka.ms redirect" | aka-redirect | Target URL, desired short path name, your alias |
 | "Send calendar invite for a recording" | send-calendar-invite | The Episode work item ID |
 | "Proofread this transcript" / "create the other subtitle versions" | transcript-proofread | A `.vtt`/`.srt` file; the proposed update conforms captions to 34 characters per line and two lines per cue, and an Episode ID/title triggers SRT/VTT/TTML attachment to ADO |
-| "Upload these captions to Frame.io" / "share captions with a reviewer" | frameio-caption-review | The ADO Episode work item ID + reviewer name/email; it finds the final Frame.io video and caption package |
+| "Upload these captions to Frame.io" / "share captions with a reviewer" | frameio-caption-review | The ADO Episode work item ID + reviewer name/email; it prepares the proofed SRT and final-video link for Sara's manual upload, then verifies the selectable track after confirmation |
 | "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
 | "Add my latest Teams message/email to ADO" | communication-history-to-ado | The ADO work item ID or description + the person, chat, email subject, or topic |
 
