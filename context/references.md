@@ -54,7 +54,8 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Add a YouTube collaborator" | youtube-collaborator | The ADO work item ID or YouTube video URL + the collaborator's channel name |
 | "Generate chapter markers" | video-chapters | The video file itself (I transcribe it locally) |
 | "Draft the Fabric review email" | fabric-production-schedule | The Episode work item ID + Frame.io review link; dates come from ADO, the skill creates an addressed Outlook draft with clickable ADO and Frame.io links, then notifies Sara privately in Teams to check Drafts |
-| "Tell me when a Fabric episode is ready to publish" | fabric-production-schedule | No per-Episode input; the scheduled watcher monitors FY27 FEI Show 236171 and FTTF Show 236193 |
+| "Tell me when Fabric reviews are finished" | fabric-production-schedule / native ADO email | The project manager changes the parent Episode to `Publication` under FY27 FEI Show 236171 or FTTF Show 236193; enabled personal ADO subscriptions 581578/581579 email Sara independently of her laptop, without waiting for metadata or captions. Configuration verified; first real delivery not yet verified |
+| "Tell me when a Fabric episode is ready to publish" | fabric-production-schedule | Separate weekday 10:30 AM/4:30 PM Pacific package audit; `Publication` alone means reviews finished. Runner startup repaired, but Teams/self-email delivery remains blocked by Work IQ; do not rely on this as the approval notification |
 | "Analyze YouTube/livestream comments" | youtube-analysis | The video, livestream, or playlist URL |
 | "Content autopsy" / "why did this video do well" | content-autopsy | The YouTube video URL (channel token must exist); a Studio CSV export is optional for CTR data |
 | "View to TAM" / "how did this video perform" | view-to-tam | The YouTube video URL |
@@ -65,6 +66,16 @@ Skills trigger automatically from natural language — no need to name them. Tab
 | "Review this PR" | github-pr-review (from `github-workflow` plugin) | The PR number or link |
 | "Add my latest Teams message/email to ADO" | communication-history-to-ado | The ADO work item ID or description + the person, chat, email subject, or topic |
 
+## Fabric Review-Finished Handoff
+
+- [Saved workflow and copy-ready colleague message](file:///C:/Users/sfinkelstein/.copilot/skills/fabric-production-schedule/SKILL.md#review-complete-ado-email-notifications) — canonical personal Fabric skill; message saved for Sara to send, not sent by Copilot.
+- Native email settings: [FEI FY27 alert](https://dev.azure.com/devrel/_notifications?subscriptionId=581578&publisherId=ms.vss-work.work-event-publisher&action=view) and [FTTF FY27 alert](https://dev.azure.com/devrel/_notifications?subscriptionId=581579&publisherId=ms.vss-work.work-event-publisher&action=view). Both enabled and read back October 28, 2026; actual email delivery awaits a qualifying transition.
+
+Copy-ready colleague message, also retained here for future sessions; not sent:
+
+```text
+When all reviews are finished, please change the parent Episode's state to Publication. That will trigger an ADO email notification to me so I can prepare the publishing package.
+```
 
 ## YouTube API
 - Tokens: `~/.copilot/youtube-tokens/` — 6 channels: azd, dotnet, msdev, reactor, vs (+ credentials.json)
