@@ -12,6 +12,7 @@
 - Team skills repo — TBD (will live under manager's GitHub)
 
 ## DevRel Studios Plugin (installed skills)
+- [Fabric final-delivery Teams template](file:///C:/Users/sfinkelstein/.copilot/skills/fabric-production-schedule/SKILL.md#final-delivery-teams-template) — Sara approved her [sent MSC message](https://teams.microsoft.com/l/message/19:f336dc580b8143eab4d92b2a920c5f26@thread.v2/1793391586131?context=%7B%22contextType%22:%22chat%22%7D) as the pattern on October 30: tagged greeting, short delivery sentence, Final video/Thumbnail/Social assets with inline links, one ADO metadata-and-captions line, thanks, and the existing Copilot sign-off; single line breaks, no blank lines. Retrieve the actual sent message for ADO capture. MSC's copy was verified in [250828 — Ep301 MSC](https://dev.azure.com/devrel/Studios/_workitems/edit/250828), Discussion comment 12308748. Template changes are local only, not a team-plugin publication.
 - Source: [mvp-copilot-plugins/plugins/devrel-studios](https://github.com/microsoft/mvp-copilot-plugins/tree/main/plugins/devrel-studios)
 - Skills installed in `~/.copilot/skills/`: aka-redirect, create-event-episodes, create-studio-support, send-calendar-invite, video-staging, view-to-tam, vtt-metadata, youtube-analysis, youtube-collaborator, youtube-description, youtube-monthly-watchhours
 - Shared scripts (plugin root): `~/.copilot/plugins/devrel-studios/scripts/` — parse-vtt.py, download-comments.py, download-playlist.py
