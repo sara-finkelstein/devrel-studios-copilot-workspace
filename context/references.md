@@ -22,6 +22,12 @@
 - ADO MCP server (`ado`) from the plugin's `.mcp.json` is already configured in `~/.copilot/mcp-config.json`
 - To update skills: re-download from the repo and re-patch `<PLUGIN_ROOT>`
 
+### DevRel metadata agent connection
+
+- [Canonical personal connection and verification instructions](file:///C:/Users/sfinkelstein/.copilot/skills/episode-metadata/SKILL.md#work-iq-connection-setup-and-verification) — updated locally October 30; the supplemental `workiq-hosted` connection supports selecting the saved DevRel agent. A live test and MSC metadata generation succeeded after restart; existing connections were preserved.
+- [Local user MCP configuration](file:///C:/Users/sfinkelstein/.copilot/mcp-config.json) uses [Microsoft's published hosted settings](https://github.com/microsoft/work-iq/blob/main/plugins/workiq/.mcp.json), with only `ask` and `list_agents` exposed. These settings and personal skill edits are **local computer only**, not published to the team plugin.
+- [FEI metadata style reference: 249838 — Ep#102, The Intelligence-Driven Enterprise](https://dev.azure.com/devrel/Studios/_workitems/edit/249838) — completed sibling under FEI Show 236171; used for MSC's verified October 30 delivery. Read live fields before reusing a style.
+
 ### Sara's Skill Publication Tracker
 
 Keep this table current when a skill is submitted, merged, superseded, or retired.
