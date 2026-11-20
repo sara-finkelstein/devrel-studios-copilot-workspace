@@ -4,6 +4,9 @@
 
 ## Active
 
+### GitHub Checkout - Copilot SDK
+- **Final-video link saved 11/17/2026:** Sara supplied the [final Frame.io video](https://f.io/ERHTBBXS) for [249061 - ep 2_Copilot SDK--GitHub Checkout](https://dev.azure.com/devrel/Studios/_workitems/edit/249061). Saved it to `Custom.Finalfile` and independently verified revision 43. Existing content and the already-Completed state were preserved; no publication claim was made.
+
 ### GitHub Checkout — September Ships / September Changelog
 - **Caption delivery 10/20:** reviewed all 150 source cues for [249060 — September Changelog recap, hosted by Andrea Griffiths](https://dev.azure.com/devrel/Studios/_workitems/edit/249060); Sara resolved 14 unclear passages individually. The [corrected SRT](file:///C:/Users/sfinkelstein/Downloads/GHC-e01-SeptShips-249060-v4.corrected.srt) contains 294 cues, at most 34 characters per line and two lines per cue, and was attached to the Episode with downloaded bytes verified. SRT only for this Episode; no VTT/TTML generated.
 - **Sara's subsequent proof:** Sara reported editing the local captions after delivery. Her newly saved filename and final content have not been verified; do not treat the earlier ADO attachment as her latest proof. Frame.io caption upload remains her manual step; no upload or final rendered timing/style was verified.
